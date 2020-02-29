@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+#root{
+    font-family: 'Poppins';
+  }
+html {
+  scroll-behavior: smooth;
+}
+.nav {
+  background-color: black;
+}
+.home {
+  background-color: transparent !important;
+}
+.App {
+  background-color: black;
+}
+.socialicons a {
+  padding-left: 5px;
+}
+.brandName:hover{
+color : goldenrod !important;
+}
+.navlink{
+  color: white !important;
+}
+.navlink:hover{
+  color: goldenrod !important;
+}
+footer p{
+  color: #000 !important;
+  font-weight: bold;
+  margin: auto;
+}
