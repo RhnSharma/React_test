@@ -31,3 +31,14 @@ footer p{
   font-weight: bold;
   margin: auto;
 }
+.submitted{
+  color: red;
+  margin: 10% 25%;
+  border: 2px solid red;
+  font-size: 2rem !important;
+  padding: 4%;
+}
+.errorMessage{
+  color: red;
+  margin: 1%;
+}

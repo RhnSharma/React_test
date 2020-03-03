@@ -20,7 +20,7 @@ const upload = multer({
       cb(null, true);
     } else {
       cb(null,false);
-      multerError = {'msg' : 'Only png,jpeg and jpg are allowed.'};
+      multerError = {'msg' : 'Only png,jpeg and jpg are allowed.','param':'image'};
       return multerError;
     }
   },
@@ -36,7 +36,7 @@ router.use(helmet());
 router.use(compression());
 
 router.post('/',upload.single('image'), async (req,res)=>{
-// let start = Date.now();
+let start = Date.now();
 // let routeid = new RouteID();
 // let id = req._id;
 // await RouteID.findOne({name:req.originalUrl}, (err,doc) => { 
@@ -61,17 +61,12 @@ router.post('/',upload.single('image'), async (req,res)=>{
 //     logger.error('ERROR DURING ID creation',err);
 // });
 // }
-// req.check('name','Invalid name').trim().isLength({min:2});
-// req.check('email','Invalid email').trim().isEmail();
-// req.check('message','Invalid message').trim().isLength({min:1});
+req.check('name','Invalid name').trim().isLength({min:2});
+req.check('email','Invalid email').trim().isEmail();
+req.check('message','Invalid message').trim().isLength({min:1});
 
-// let errors = req.validationErrors();
-// if(multerError && errors === false){
-//   errors = [];
-//   errors.push(multerError);
-// } else if(multerError && errors && errors !== false){
-//   errors.push(multerError);
-// }
+let errors = req.validationErrors();
+
 // const body = req.body;
 //   let error = {};
 //   // Adding body of the request as log data
@@ -95,7 +90,9 @@ router.post('/',upload.single('image'), async (req,res)=>{
 //     "success": true
 //   })
 // }
-    // req.session.success = true;
+if(errors){
+  res.status(422).send(errors);
+}else{
     var submission = new Submission();
     submission.name = req.body.name;
     submission.email = req.body.email;
@@ -106,6 +103,7 @@ router.post('/',upload.single('image'), async (req,res)=>{
     submission.image.contentType = 'image/jpeg';
     submission.save()
     .then(data=>{
+      res.send(data);
       console.log('No errors during record insertion'.green,colors.green(data));
       logger.info('DATA INSERTED WITHOUT ANY ERROR');
     })
@@ -116,6 +114,7 @@ router.post('/',upload.single('image'), async (req,res)=>{
     console.log(`Execution Time(POST /submit) is ${Date.now() - start}ms`.green);
     morgan(':date :method :url :status :response-time ms');
     logger.info(req.method,`request id: ${id} | Execution Time : ${Date.now() - start}ms`);
+}
 });
 
 module.exports = router;
