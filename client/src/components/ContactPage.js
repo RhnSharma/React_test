@@ -38,7 +38,7 @@ const ContactPage = (props) => {
       formData.append('image', image);
       axios.post("/submit",formData)
       .then(result => {
-        console.log(result.data);
+        console.log(result);
         document.getElementById("exampleFile").value = "";
         setUser(    
           {
@@ -53,7 +53,6 @@ const ContactPage = (props) => {
       })
       .catch(err => {
         validationErrors = err.response.data;
-        console.log(validationErrors);
         setUser({...user, submitted : false, errors : validationErrors});
       });
     };

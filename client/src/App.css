@@ -12,7 +12,7 @@ html {
   background-color: transparent !important;
 }
 .App {
-  background-color: black;
+  background-color: #0e0e0e;
 }
 .socialicons a {
   padding-left: 5px;
@@ -41,4 +41,29 @@ footer p{
 .errorMessage{
   color: red;
   margin: 1%;
+}
+.profile-image{
+  height: 400px;
+  width: 400px;
+  box-shadow: -3px -3px 5px #ffffff70, 3px 3px 15px #00000090;
+}
+.subproject{
+  display: flex;
+  justify-content: space-between;
+}
+.subprojectleft a{
+ padding-left: 10px; 
+}
+.subprojectleft .link:hover{
+color: red !important;
+}
+.projectthumbnail {
+  box-shadow: -3px -3px 5px #ffffff70, 3px 3px 15px #00000090;
+}
+#users{
+  height: auto;
+  margin-top: 4%;
+}
+#users li {
+  margin-bottom: 4%;
 }

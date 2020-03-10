@@ -12,10 +12,16 @@ router.use(compression());
 
 router.get('/', async (req,res) => {
     submissions = await Submission.find();
-    submissions.forEach(submission => {
-        submission.image.data = Buffer.from(submission.image.data).toString('base64');
-        return submission.image.data;
-     })
+    const updatedSubmissions = submissions.map(submission => (
+        {
+            id : submission._id,
+            name : submission.name,
+            email : submission.email,
+            message : submission.message,
+            createdAt : submission.createdAt,
+            image : Buffer.from(submission.image.data).toString('base64') 
+        }));
+        res.send(updatedSubmissions);
 })
 
 module.exports = router;

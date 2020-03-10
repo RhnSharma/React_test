@@ -17,7 +17,7 @@ const TopNav = (props) => {
 
   return (
     <div>
-      <Navbar className='navbar-dark' style={{'backgroundColor':'#000'}} expand="md">
+      <Navbar className='navbar-dark' style={{'backgroundColor':'#0e0e0e'}} expand="md">
   <NavbarBrand className='brandName' href="/">Rohan Sharma</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>

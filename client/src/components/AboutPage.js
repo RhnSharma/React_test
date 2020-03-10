@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import profile from '../images/myimage.jpg';
 import { IoMdPerson } from 'react-icons/io';
+import './../App.css';
 
 const AboutPage = (props) => {
   return (
@@ -12,7 +13,7 @@ const AboutPage = (props) => {
         <p className='lead'>An Engineer who design and develop full stack websites.</p>
         </Col>
         <Col xs="6">
-          <img style={{'height':'400px','width':'400px'}} src={profile} className='img-fluid rounded-circle float-right' alt='profile'></img>
+          <img src={profile} className='profile-image img-fluid rounded-circle float-right' alt='profile'></img>
         </Col>
       </Row>
     </Container>

@@ -91,7 +91,7 @@ let errors = req.validationErrors();
 //   })
 // }
 if(errors){
-  res.status(422).send(errors);
+  res.status(400).send(errors);
 }else{
     var submission = new Submission();
     submission.name = req.body.name;
@@ -113,7 +113,7 @@ if(errors){
     });
     console.log(`Execution Time(POST /submit) is ${Date.now() - start}ms`.green);
     morgan(':date :method :url :status :response-time ms');
-    logger.info(req.method,`request id: ${id} | Execution Time : ${Date.now() - start}ms`);
+    // logger.info(req.method,`request id: ${id} | Execution Time : ${Date.now() - start}ms`);
 }
 });
 
