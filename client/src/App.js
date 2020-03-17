@@ -7,6 +7,10 @@ import ContactPage from './components/ContactPage';
 import ProjectsPage from './components/ProjectsPage';
 import Footer from './components/Footer';
 import Submissions from './components/Submissions';
+import Blogs from './components/Blogs';
+import AddBlog from './components/AddBlog';
+import WithAuth from './components/WithAuth';
+import Login from './components/login';
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -24,6 +28,9 @@ function App() {
       </Fragment>
     } />
      <Route path='/submissions' component={Submissions} />
+     <Route path='/blogs' component={Blogs} />
+     <Route path='/login' component={Login} />
+     <Route path="/addblog" component={WithAuth(AddBlog)} />
      </Switch>
      <Footer />
     </div>

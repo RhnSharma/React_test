@@ -4,7 +4,7 @@ import { IoMdPerson } from 'react-icons/io';
 import './../App.css';
 import axios from 'axios';
 
-const AboutPage = (props) => {
+const Submissions = (props) => {
   const [submissions, setSubmissions] = useState([]);
     useEffect(()=>{
       axios.get('/getAll',{
@@ -43,4 +43,4 @@ const AboutPage = (props) => {
   );
 }
 
-export default AboutPage;
+export default Submissions;

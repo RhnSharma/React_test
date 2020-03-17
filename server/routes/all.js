@@ -21,7 +21,7 @@ router.get('/', async (req,res) => {
             createdAt : submission.createdAt,
             image : Buffer.from(submission.image.data).toString('base64') 
         }));
-        res.send(updatedSubmissions);
+    res.send(updatedSubmissions);
 })
 
 module.exports = router;

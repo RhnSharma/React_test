@@ -17,6 +17,11 @@ morgan.token('host', (req, res) => {
 router.use('/submit',require('./submit'));
 router.use('/getForm',require('./form'));
 router.use('/getAll',require('./all'));
+router.use('/getBlogs',require('./blogs'));
+router.use('/addblogpost',require('./addblog'));
+router.use('/adduser',require('./users'));
+router.use('/authenticate',require('./authentication'));
+router.use('/checktoken',require('./checktoken'));
 router.use('/getImage',require('./image'));
 router.use(morgan(':date :method :url :status :response-time ms'));
 router.use(helmet());

@@ -1,8 +1,10 @@
 require('./models/db');
+require('dotenv').config()
 const express = require('express');
 const hbs  = require('hbs');
 const path = require('path');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 var expressValidator = require('express-validator');
 var expressSession = require('express-session');
 const Logger = require('../logs/log');
@@ -10,6 +12,8 @@ const logger = new Logger('app');
 const cors = require('cors');
 
 let app = express();
+
+const secret = process.env.JWT_SECRET;
 // var toHttps = require('express-to-https').basic;
 // app.use(toHttps);
 app.set('view engine', hbs);
@@ -17,6 +21,7 @@ app.use(express.static(__dirname + './../views'));
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.use(cookieParser());
 app.use(expressValidator());
 app.use(expressSession({secret:"yagami", saveUninitialized:false, resave:false}));
 app.use(cors());

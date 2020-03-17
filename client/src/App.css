@@ -47,16 +47,6 @@ footer p{
   width: 400px;
   box-shadow: -3px -3px 5px #ffffff70, 3px 3px 15px #00000090;
 }
-.subproject{
-  display: flex;
-  justify-content: space-between;
-}
-.subprojectleft a{
- padding-left: 10px; 
-}
-.subprojectleft .link:hover{
-color: red !important;
-}
 .projectthumbnail {
   box-shadow: -3px -3px 5px #ffffff70, 3px 3px 15px #00000090;
 }
@@ -66,4 +56,18 @@ color: red !important;
 }
 #users li {
   margin-bottom: 4%;
+}
+.card-body a {
+  padding-left: 20px;
+}
+.link:hover {
+  color: red !important;
+}
+.sub{
+  display: flex;
+  justify-content: space-between;
+}
+#blog{
+  height: auto;
+  margin-top: 4%;
 }

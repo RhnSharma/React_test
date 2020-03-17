@@ -31,6 +31,9 @@ const TopNav = (props) => {
             <NavItem>
               <NavLink href="#projects" className='navlink'>Projects</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink href="/blogs" className='navlink'>Blog</NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
