@@ -43,7 +43,7 @@ const Login = (props) => {
         : 
       <Container className='mb-5' id='contact'>
       <Row>
-      <Col xs='8'>
+      <Col md='8'>
       <h1 
       className='display-4 text-info' 
       style={{'marginLeft' : '-10px', 'marginBottom':'20px','fontSize':'2rem'}}

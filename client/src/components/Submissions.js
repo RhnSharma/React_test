@@ -18,7 +18,7 @@ const Submissions = (props) => {
   return (
     <Container className='mb-5' id="users">
       <Row>
-        <Col xs="8">
+        <Col md="8">
         <h1 className='display-4 text-info' style={{'fontSize':'2rem'}}> <IoMdPerson /> Submissions : </h1>
         <ol>
         {submissions.map(submission => {

@@ -8,6 +8,7 @@ import ProjectsPage from './components/ProjectsPage';
 import Footer from './components/Footer';
 import Submissions from './components/Submissions';
 import Blogs from './components/Blogs';
+import Blog from './components/Blog';
 import AddBlog from './components/AddBlog';
 import WithAuth from './components/WithAuth';
 import Login from './components/login';
@@ -29,6 +30,7 @@ function App() {
     } />
      <Route path='/submissions' component={Submissions} />
      <Route path='/blogs' component={Blogs} />
+     <Route path='/blog/:id' component={Blog} />
      <Route path='/login' component={Login} />
      <Route path="/addblog" component={WithAuth(AddBlog)} />
      </Switch>

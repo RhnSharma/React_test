@@ -18,6 +18,7 @@ router.use('/submit',require('./submit'));
 router.use('/getForm',require('./form'));
 router.use('/getAll',require('./all'));
 router.use('/getBlogs',require('./blogs'));
+router.use('/getBlog',require('./blog'));
 router.use('/addblogpost',require('./addblog'));
 router.use('/adduser',require('./users'));
 router.use('/authenticate',require('./authentication'));

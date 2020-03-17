@@ -10,7 +10,7 @@ const ProjectsPage = (props) => {
   return (
     <Container className='mb-5' id='projects'>
       <Row>
-        <Col xs="10">
+        <Col md="10">
         <h1 className='display-4 mb-3 text-info' style={{'fontSize':'2rem'}}> <IoMdFolder /> Projects</h1>
         <div className="card text-white bg-dark mb-4">
           <img className="card-img-top" src={chatapp} alt="Chat app"></img>
