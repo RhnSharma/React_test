@@ -51,7 +51,7 @@ footer p{
   box-shadow: -3px -3px 5px #ffffff70, 3px 3px 15px #00000090;
 }
 #users{
-  height: auto;
+  min-height: 80vh;
   margin-top: 4%;
 }
 #users li {
@@ -68,6 +68,6 @@ footer p{
   justify-content: space-between;
 }
 #blog{
-  height: auto;
+  min-height: 80vh;
   margin-top: 4%;
 }

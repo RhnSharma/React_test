@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { FaPenNib, FaClock } from 'react-icons/fa';
 import axios from 'axios';
-import Blog from './Blog';
 import './../App.css';
 
 const Blogs = (props) => {
@@ -29,8 +28,7 @@ const Blogs = (props) => {
             <h1 className='card-title'>{post.title}</h1>
             <p className='card-subtitle mb-2 text-muted'><FaClock color='white'/>&nbsp; {post.createdAt}</p>
             <p className='card-subtitle mb-2 text-danger'>{post.description}</p>
-            {/* <p className='card-text'>{post.post}</p> */}
-            <a href={`/blog/${post._id}`} className='btn btn-secondary'>Read more</a>
+            <a href={`/blog/${post.slug}`} className='btn btn-secondary'>Read more</a>
             </div>
             </div>
           ) 

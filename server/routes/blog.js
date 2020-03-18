@@ -10,8 +10,8 @@ router.use(morgan(':date :method :url :status :response-time ms'));
 router.use(helmet());
 router.use(compression());
 
-router.get('/:id', async (req,res) => {
-    blog = await Blog.findById(req.params.id);
+router.get('/:slug', async (req,res) => {
+    blog = await Blog.findOne({ slug : req.params.slug });
     res.send(blog);
 })
 

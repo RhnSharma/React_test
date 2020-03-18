@@ -30,7 +30,7 @@ function App() {
     } />
      <Route path='/submissions' component={Submissions} />
      <Route path='/blogs' component={Blogs} />
-     <Route path='/blog/:id' component={Blog} />
+     <Route path='/blog/:slug' component={Blog} />
      <Route path='/login' component={Login} />
      <Route path="/addblog" component={WithAuth(AddBlog)} />
      </Switch>

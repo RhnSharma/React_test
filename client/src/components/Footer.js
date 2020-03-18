@@ -3,7 +3,7 @@ import { FaLinkedinIn, FaGithub, FaInstagram, FaTwitter, FaWordpress } from "rea
 import './../App.css';
 
 const Footer = () => (
-  <footer className="footer text-center text-dark bg-light">
+  <footer className="footer text-center text-dark bg-light navbar-fixed-bottom">
     <p>&copy; Copyright 2020</p>
     <div className='socialicons'>
       <a href='https://www.linkedin.com/in/rohan-sharma-683897135/' target='_blank' rel='noopener noreferrer'><FaLinkedinIn color='black'/></a>  
