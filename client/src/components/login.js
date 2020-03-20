@@ -38,7 +38,7 @@ const Login = (props) => {
   }
  const submission = user.submitted;
   return (
-    <div className='mt-5' style={{'height' : '90vh'}}>
+    <div className='mt-5' style={{'minHeight' : '80vh'}}>
       {submission ? <p className='lead submitted'>User is reistered in the db.</p> 
         : 
       <Container className='mb-5' id='contact'>

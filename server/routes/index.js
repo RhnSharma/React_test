@@ -20,6 +20,8 @@ router.use('/getAll',require('./all'));
 router.use('/getBlogs',require('./blogs'));
 router.use('/getBlog',require('./blog'));
 router.use('/addblogpost',require('./addblog'));
+router.use('/editblogpost',require('./editblog'));
+router.use('/deleteblogpost',require('./deleteblog'));
 router.use('/adduser',require('./users'));
 router.use('/authenticate',require('./authentication'));
 router.use('/checktoken',require('./checktoken'));

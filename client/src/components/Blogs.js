@@ -6,6 +6,7 @@ import './../App.css';
 
 const Blogs = (props) => {
   const [posts, setPosts] = useState([]);
+  const[counter, setCounter] = useState(0);
   useEffect(()=> {
     axios.get('/getBlogs',{
       headers : {
@@ -14,7 +15,16 @@ const Blogs = (props) => {
     })
     .then(res => setPosts(res.data))
     .catch(err=>console.log(err));
-  },[])
+  },[counter])
+  const deletePost = (slug) => {
+    const requestOptions = {
+      method: 'DELETE'
+    }
+    axios.delete(`/deleteblogpost/${slug}`, requestOptions)
+    .then(res => console.log(res))
+    .catch(err => console.log(err)); 
+    setCounter(counter => counter + 1);
+  }
   return (
     <Container className='mb-5' id='blog'>
       <Row>
@@ -28,7 +38,9 @@ const Blogs = (props) => {
             <h1 className='card-title'>{post.title}</h1>
             <p className='card-subtitle mb-2 text-muted'><FaClock color='white'/>&nbsp; {post.createdAt}</p>
             <p className='card-subtitle mb-2 text-danger'>{post.description}</p>
-            <a href={`/blog/${post.slug}`} className='btn btn-secondary'>Read more</a>
+            <a href={`/blog/${post.slug}`} className='btn btn-secondary p-1'>Read more</a>
+            <a href={`/editblog/${post.slug}`} className='btn btn-primary mx-2 p-1'>Edit Post</a>
+            <a onClick={() => deletePost(post.slug)} className='btn btn-danger p-1'>Delete Post</a>
             </div>
             </div>
           ) 

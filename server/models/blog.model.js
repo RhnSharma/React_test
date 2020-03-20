@@ -43,6 +43,6 @@ blogSchema.pre('validate',function(next){
 
     next()
 })
-
+  
 
 mongoose.model('Blog', blogSchema);  

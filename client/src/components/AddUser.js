@@ -35,7 +35,7 @@ const AddBlog = (props) => {
     };
  const submission = user.submitted;
   return (
-    <div className='mt-5' style={{'height' : '90vh'}}>
+    <div className='mt-5' style={{'minHeight' : '80vh'}}>
       {submission ? <p className='lead submitted'>User is added to the db.</p> 
         : 
       <Container className='mb-5' id='contact'>
@@ -56,7 +56,7 @@ const AddBlog = (props) => {
       <Label for="description"> Password :  </Label>
       <Input onChange={onChangeForm} type="password" name="password" id="examplepassword" value={user.password} placeholder="Type your password here" />
     </FormGroup>
-    <Button onClick={handleSubmit}>Save</Button>
+    <Button onClick={handleSubmit}>Add User</Button>
   </Form>
       </Col>
       </Row>
