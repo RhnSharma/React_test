@@ -1,7 +1,6 @@
 require('./models/db');
 require('dotenv').config()
 const express = require('express');
-const hbs  = require('hbs');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -13,7 +12,6 @@ const cors = require('cors');
 
 let app = express();
 
-const secret = process.env.JWT_SECRET;
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(cookieParser());
