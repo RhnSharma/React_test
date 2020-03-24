@@ -68,7 +68,7 @@ const AddBlog = (props) => {
       <Input onChange={onChangeForm} type="textarea" name="post" id="examplepsot" value={blog.post} placeholder="Type your post content here" />
       <p className='errorMessage lead'>{blog.errors && blog.errors.findIndex(x =>x.param === "post") !== -1 ? blog.errors[blog.errors.findIndex(x => x.param === "post")].msg : ''}</p>
     </FormGroup>
-    <Button onClick={handleSubmit}>Add post</Button>
+    <Button color='primary' onClick={handleSubmit}>Add post</Button>
     <Button href='/' className='mx-2'>Cancel</Button>
   </Form>
       </Col>

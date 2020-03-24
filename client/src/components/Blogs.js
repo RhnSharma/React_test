@@ -23,7 +23,7 @@ const Blogs = (props) => {
     axios.delete(`/deleteblogpost/${slug}`, requestOptions)
     .then(res => console.log(res))
     .catch(err => console.log(err)); 
-    setCounter(counter => counter + 1);
+    setCounter(counter + 1);
   }
   return (
     <Container className='mb-5' id='blog'>

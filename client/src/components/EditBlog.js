@@ -52,7 +52,7 @@ const EditBlog = (props) => {
  const submission = blog.submitted;
   return (
     <div className='mt-5' style={{'minHeight' : '80vh'}}>
-      {submission ? <p className='lead submitted'>Your post is updated.</p> 
+      {submission ? <p className='lead submitted'>Your post has been updated.</p> 
         : 
       <Container className='mb-5' id='contact'>
       <Row>
@@ -78,7 +78,7 @@ const EditBlog = (props) => {
       <Input onChange={onChangeForm} type="textarea" name="post" id="examplepsot" value={blog.post} placeholder="Type your post content here" />
       <p className='errorMessage lead'>{blog.errors && blog.errors.findIndex(x =>x.param === "post") !== -1 ? blog.errors[blog.errors.findIndex(x => x.param === "post")].msg : ''}</p>
     </FormGroup>
-    <Button onClick={handleSubmit}>Update post</Button>
+    <Button color='warning' onClick={handleSubmit}>Update post</Button>
     <Button href='/blogs' className='mx-2'>Cancel</Button>
   </Form>
       </Col>

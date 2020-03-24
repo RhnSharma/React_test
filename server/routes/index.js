@@ -15,7 +15,6 @@ morgan.token('host', (req, res) => {
 })
 
 router.use('/submit',require('./submit'));
-router.use('/getForm',require('./form'));
 router.use('/getAll',require('./all'));
 router.use('/getBlogs',require('./blogs'));
 router.use('/getBlog',require('./blog'));

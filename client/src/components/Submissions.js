@@ -18,25 +18,21 @@ const Submissions = (props) => {
   return (
     <Container className='mb-5' id="users">
       <Row>
-        <Col md="8">
+        <Col md="6">
         <h1 className='display-4 text-info' style={{'fontSize':'2rem'}}> <IoMdPerson /> Submissions : </h1>
-        <ol>
         {submissions.map(submission => {
           return (
-          <li key={submission.id}>
-            Name :  {submission.name}
-            <br />
-            Email :  {submission.email}
-            <br />
-            Message : {submission.message}
-            <br />
-            Created at : {submission.createdAt}
-            <br />
-            <p>Image : </p><img className='img-fluid' src={`data:image/jpeg;base64,${submission.image}`} alt='Project' height='300' width='400'/>
-          </li>
+          <div key={submission.id} className="card text-light bg-dark mb-2" style={{'width':'25rem','height':'auto'}} >
+          <img className="card-img-top" src={`data:image/jpeg;base64,${submission.image}`} alt="Card image cap"></img>
+          <div className="card-body">
+            <h5 className="card-title">{submission.name}</h5>
+            <p className="card-text text-muted">{submission.createdAt}</p>
+            <p className="card-text">{submission.email}</p>
+            <p className="card-text">{submission.message}</p>
+          </div>
+        </div>
           )
         })}
-        </ol>
         </Col>
       </Row>
     </Container>
