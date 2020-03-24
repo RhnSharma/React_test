@@ -14,11 +14,6 @@ const cors = require('cors');
 let app = express();
 
 const secret = process.env.JWT_SECRET;
-// var toHttps = require('express-to-https').basic;
-// app.use(toHttps);
-app.set('view engine', hbs);
-app.use(express.static(__dirname + './../views'));
-
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(cookieParser());
