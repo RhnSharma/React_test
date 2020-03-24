@@ -24,14 +24,14 @@ app.use(require('./routes'));
 // Serve static assets if in production
 if(process.env.NODE_ENV === 'production'){
     // Set static folder
-    app.use(express.static('../client/build'));
+    app.use('/',express.static(path.join(__dirname,'../client/build')));
 
     app.get('*', (req, res) => {
         res.sendFile(path.join(__dirname, '../client/build/index.html'));
     });
 }
 
-app.listen(process.env.PORT || 5000, ()=>{
+app.listen(process.env.PORT, ()=>{
     logger.info("APP LAUNCHED AT PORT 5000");
-    console.log('Server is up at port 5000');
+    console.log(`Server is up at port ${process.env.PORT}`);
 })
