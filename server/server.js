@@ -19,6 +19,8 @@ app.use(expressValidator());
 app.use(expressSession({secret:"yagami", saveUninitialized:false, resave:false}));
 app.use(cors());
 
+app.use(express.static('../client/build'));
+
 app.use('/',require('./routes'));
 
 // // Serve static assets if in production
