@@ -21,7 +21,7 @@ app.use(cors());
 
 app.use(express.static('../client/build'));
 
-app.use('/',require('./routes'));
+app.use(require('./routes'));
 
 // // Serve static assets if in production
 // if(process.env.NODE_ENV === 'production'){
