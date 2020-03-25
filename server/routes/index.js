@@ -6,6 +6,7 @@ const uuidv4 = require('uuid/v4');
 const mongoose = require('mongoose');
 const RouteID = mongoose.model('RouteID');
 const colors = require('colors');
+const path = require('path');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const compression = require('compression');
@@ -58,7 +59,8 @@ routeid.save()
 });
 req.session.errors = null;
 req.session.success = null;
-res.sendFile(path.join(__dirname, '../../client/build/index.html'));
+res.sendFile(path.join(__dirname, '../client/build/index.html'));
+
 console.log(`Execution Time(GET /) is ${Date.now() - start}ms and ID is ${id}`.green);
 morgan(':date :method :url :status :response-time ms');
 logger.info(req.method,`APP STARTED | request id: ${id} | Execution Time : ${Date.now() - start}ms`);
