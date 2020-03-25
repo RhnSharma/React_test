@@ -19,17 +19,17 @@ app.use(expressValidator());
 app.use(expressSession({secret:"yagami", saveUninitialized:false, resave:false}));
 app.use(cors());
 
-app.use(require('./routes'));
+app.use('/',require('./routes'));
 
-// Serve static assets if in production
-if(process.env.NODE_ENV === 'production'){
-    // Set static folder
-    app.use(express.static('../client/build'));
+// // Serve static assets if in production
+// if(process.env.NODE_ENV === 'production'){
+//     // Set static folder
+//     app.use(express.static('../client/build'));
 
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, '../client/build/index.html'));
-    });
-}
+//     app.get('*', (req, res) => {
+//         res.sendFile(path.join(__dirname, '../client/build/index.html'));
+//     });
+// }
 
 app.listen(process.env.PORT || 5000, ()=>{
     logger.info("APP LAUNCHED AT PORT 5000");
