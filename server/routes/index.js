@@ -58,6 +58,7 @@ routeid.save()
 });
 req.session.errors = null;
 req.session.success = null;
+res.send('Hello World');
 console.log(`Execution Time(GET /) is ${Date.now() - start}ms and ID is ${id}`.green);
 morgan(':date :method :url :status :response-time ms');
 logger.info(req.method,`APP STARTED | request id: ${id} | Execution Time : ${Date.now() - start}ms`);

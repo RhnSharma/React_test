@@ -31,7 +31,7 @@ if(process.env.NODE_ENV === 'production'){
     });
 }
 
-app.listen(process.env.PORT, ()=>{
+app.listen(process.env.PORT || 5000, ()=>{
     logger.info("APP LAUNCHED AT PORT 5000");
     console.log(`Server is up at port ${process.env.PORT}`);
 })
