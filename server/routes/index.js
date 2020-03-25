@@ -59,7 +59,6 @@ routeid.save()
 });
 req.session.errors = null;
 req.session.success = null;
-res.sendFile(path.join(__dirname, '../../client/build/index.html'));
 
 console.log(`Execution Time(GET /) is ${Date.now() - start}ms and ID is ${id}`.green);
 morgan(':date :method :url :status :response-time ms');
