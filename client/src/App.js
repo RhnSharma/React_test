@@ -31,7 +31,7 @@ function App() {
            <ProjectsPage />
       </Fragment>
     } />
-     <Route path='/submissions' component={Submissions} />
+     <Route path='/submissions' component={WithAuth(Submissions)} />
      <Route path='/blogs' component={Blogs} />
      <Route path='/blog/:slug' component={Blog} />
      <Route path='/login' component={Login} />

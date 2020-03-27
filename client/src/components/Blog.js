@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'reactstrap';
 import { FaClock } from 'react-icons/fa';
 import { IoIosArrowBack } from 'react-icons/io';
@@ -22,7 +23,7 @@ const Blog = (props) => {
     <Container className='mb-5' id='blog'>
       <Row>
         <Col md="8">
-        <a href='/blogs' className='lead mb-5' style={{'textDecoration':'none'}}><IoIosArrowBack />Go back</a>
+        <Link to='/blogs' className='lead mb-5' style={{'textDecoration':'none'}}><IoIosArrowBack />Go back</Link>
         <h1 className='display-4 mt-1 mb-3'>{post.title}</h1>
         <div className='text-muted mb-3'><FaClock /> &nbsp; {post.createdAt}</div>
         <h4 className='text-danger mb-3'>{post.description}</h4>

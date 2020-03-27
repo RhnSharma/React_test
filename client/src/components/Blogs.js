@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'reactstrap';
 import { FaPenNib, FaClock } from 'react-icons/fa';
 import axios from 'axios';
@@ -38,8 +39,8 @@ const Blogs = (props) => {
             <h1 className='card-title'>{post.title}</h1>
             <p className='card-subtitle mb-2 text-muted'><FaClock color='white'/>&nbsp; {post.createdAt}</p>
             <p className='card-subtitle mb-2 text-danger'>{post.description}</p>
-            <a href={`/blog/${post.slug}`} className='btn btn-secondary p-1'>Read more</a>
-            <a href={`/editblog/${post.slug}`} className='btn btn-primary mx-2 p-1'>Edit Post</a>
+            <Link to={`/blog/${post.slug}`} className='btn btn-secondary p-1'>Read more</Link>
+            <Link to={`/editblog/${post.slug}`} className='btn btn-primary mx-2 p-1'>Edit Post</Link>
             <a onClick={() => deletePost(post.slug)} className='btn btn-danger p-1'>Delete Post</a>
             </div>
             </div>

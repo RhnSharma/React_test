@@ -43,8 +43,7 @@ footer p{
   margin: 1%;
 }
 .profile-image{
-  height: 400px;
-  width: 400px;
+  max-height: 400px;
   box-shadow: -3px -3px 5px #ffffff70, 3px 3px 15px #00000090;
 }
 .projectthumbnail {
@@ -70,4 +69,18 @@ footer p{
 #blog{
   min-height: 80vh;
   margin-top: 4%;
+}
+#bloglink{
+  color: white;
+  text-decoration: none;
+}
+#bloglink:hover{
+  color: goldenrod !important;
+}
+#brandName{
+  color: white;
+  text-decoration: none;
+}
+#brandName:hover{
+  color: goldenrod !important;
 }

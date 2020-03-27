@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Label, Input, Container, Row, Col } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './../App.css';
 
@@ -69,7 +70,7 @@ const AddBlog = (props) => {
       <p className='errorMessage lead'>{blog.errors && blog.errors.findIndex(x =>x.param === "post") !== -1 ? blog.errors[blog.errors.findIndex(x => x.param === "post")].msg : ''}</p>
     </FormGroup>
     <Button color='primary' onClick={handleSubmit}>Add post</Button>
-    <Button href='/' className='mx-2'>Cancel</Button>
+    <Link to='/' className='mx-2'>Cancel</Link>
   </Form>
       </Col>
       </Row>
