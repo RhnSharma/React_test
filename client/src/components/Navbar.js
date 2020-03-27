@@ -19,7 +19,7 @@ const TopNav = (props) => {
   return (
     <div>
       <Navbar className='navbar-dark' style={{'backgroundColor':'#0e0e0e'}} expand="md">
-  <NavbarBrand className='brandName'><Link id='brandName' to='/'>Rohan Sharma</Link></NavbarBrand>
+  <Link className='navbar-brand' id='brandName' to='/'>Rohan Sharma</Link>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
@@ -33,7 +33,7 @@ const TopNav = (props) => {
               <NavLink href="/#projects" className='navlink'>Projects</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className='navlink'><Link id='bloglink' to='/blogs'>Blog</Link></NavLink>
+              <Link className='nav-link' id='bloglink' to='/blogs'>Blog</Link>
             </NavItem>
           </Nav>
         </Collapse>

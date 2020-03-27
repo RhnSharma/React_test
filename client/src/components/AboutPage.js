@@ -8,12 +8,12 @@ const AboutPage = (props) => {
   return (
     <Container className='mb-5' id='about'>
       <Row>
-        <Col md="6">
+        <Col md="8">
         <h1 className='display-4 text-info' style={{'fontSize':'2rem'}}> <IoMdPerson /> About Me</h1>
         <p className='lead'>An Engineer who design and develop full stack websites.</p>
         </Col>
-        <Col xs="6">
-          <img src={profile} className='profile-image img-fluid rounded-circle float-right' alt='profile'></img>
+        <Col md="4">
+          <img src={profile} className='profile-image img-md img-fluid rounded-circle' alt='profile'></img>
         </Col>
       </Row>
     </Container>

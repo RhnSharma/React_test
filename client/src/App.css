@@ -10,6 +10,8 @@ html {
 }
 .home {
   background-color: transparent !important;
+  height: 90vh;
+  margin-top: 5vh;
 }
 .App {
   background-color: #0e0e0e;
