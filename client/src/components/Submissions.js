@@ -20,7 +20,9 @@ const Submissions = (props) => {
       <Row>
         <Col md="6">
         <h1 className='display-4 text-info' style={{'fontSize':'2rem'}}> <IoMdPerson /> Submissions : </h1>
-        {submissions.map(submission => {
+        { submissions.length ? 
+        (
+        submissions.map(submission => {
           return (
           <div key={submission.id} className="card text-light bg-dark mb-2" style={{'width':'25rem','height':'auto'}} >
           <img className="card-img-top" src={`data:image/jpeg;base64,${submission.image}`} alt="Card image cap"></img>
@@ -32,7 +34,15 @@ const Submissions = (props) => {
           </div>
         </div>
           )
-        })}
+        })
+        ) : (
+          <div class="clearfix p-5 m-5">
+            <div class="spinner-border float-left" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+          )
+      }
         </Col>
       </Row>
     </Container>

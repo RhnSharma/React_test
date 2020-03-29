@@ -31,7 +31,8 @@ const Blogs = (props) => {
       <Row>
         <Col md="8">
         <h1 className='display-4 text-primary' style={{'fontSize':'2rem'}}> <FaPenNib /> All Posts : </h1>
-        {
+        { posts.length ? 
+        (
         posts.map(post => {
           return (
             <div key={post._id} className='card bg-dark text-white mt-4'>
@@ -46,6 +47,13 @@ const Blogs = (props) => {
             </div>
           ) 
         })
+        ) : (
+          <div class="clearfix p-5 m-5">
+            <div class="spinner-border float-left" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+          )
         }
         </Col>
       </Row>

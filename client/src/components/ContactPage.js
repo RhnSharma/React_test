@@ -14,7 +14,8 @@ const ContactPage = (props) => {
       message : '',
       image : '',
       submitted : false,
-      errors : null
+      errors : null,
+      isLoading: false
     }
     );
     let validationErrors;
@@ -30,6 +31,7 @@ const ContactPage = (props) => {
     }
     let handleSubmit = e => {
       e.preventDefault();
+      setUser({...user,isLoading:true})
       const { name, email, message, image } = user;
       let formData = new FormData();
       formData.append('name', name);
@@ -47,7 +49,8 @@ const ContactPage = (props) => {
           message : '',
           image : '',
           submitted : true,
-          errors : null
+          errors : null,
+          isLoading:false
         }
           );
       })
@@ -92,7 +95,7 @@ const ContactPage = (props) => {
         <Input onChange={onChangeForm} type="textarea" name="message" value={user.message} id="exampleText" placeholder="Type your message here" />
         <p className='errorMessage lead'>{user.errors && user.errors.findIndex(x =>x.param === "message") !== -1 ? user.errors[user.errors.findIndex(x => x.param === "message")].msg : ''}</p>
       </FormGroup>
-      <Button onClick={handleSubmit}>Submit</Button>
+      <Button onClick={handleSubmit}>{user.isLoading ? "Submitting..." : "Submit"}</Button>
     </Form>
         </Col>
         </Row>

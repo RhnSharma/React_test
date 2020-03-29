@@ -70,7 +70,7 @@ const AddBlog = (props) => {
       <p className='errorMessage lead'>{blog.errors && blog.errors.findIndex(x =>x.param === "post") !== -1 ? blog.errors[blog.errors.findIndex(x => x.param === "post")].msg : ''}</p>
     </FormGroup>
     <Button color='primary' onClick={handleSubmit}>Add post</Button>
-    <Link to='/' className='mx-2'>Cancel</Link>
+    <Link to='/' className='btn btn-secondary mx-2'>Cancel</Link>
   </Form>
       </Col>
       </Row>

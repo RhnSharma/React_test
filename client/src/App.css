@@ -44,10 +44,9 @@ footer p{
   color: red;
   margin: 1%;
 }
-.profile-image{
+/* .profile-image{
   max-height: 400px;
-  box-shadow: -3px -3px 5px #ffffff70, 3px 3px 15px #00000090;
-}
+} */
 .projectthumbnail {
   box-shadow: -3px -3px 5px #ffffff70, 3px 3px 15px #00000090;
 }
@@ -85,4 +84,28 @@ footer p{
 }
 #brandName:hover{
   color: goldenrod !important;
+}
+/* xs */
+.profile-image {
+  width: 250px;
+  height: auto;
+  box-shadow: -3px -3px 5px #ffffff70, 3px 3px 15px #00000090;
+}
+/* sm */
+@media (min-width: 768px) {
+  .profile-image {
+      width: 300px;
+  }
+}
+/* md */
+@media (min-width: 992px) {
+  .profile-image {
+      width: 350px;
+  }
+}
+/* lg */
+@media (min-width: 1200px) {
+  .profile-image {
+      width: 400px;
+  }
 }
