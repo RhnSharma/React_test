@@ -24,7 +24,6 @@ const AddBlog = (props) => {
       const { title, description, post } = blog;
       axios.post("/addblogpost",{title, description, post})
       .then(result => {
-        console.log(result);
         setBlog(    
         {
             title : '',

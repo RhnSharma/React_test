@@ -25,7 +25,7 @@ const Submissions = (props) => {
         submissions.map(submission => {
           return (
           <div key={submission.id} className="card text-light bg-dark mb-2" style={{'width':'25rem','height':'auto'}} >
-          <img className="card-img-top" src={`data:image/jpeg;base64,${submission.image}`} alt="Card image cap"></img>
+          <img className="card-img-top" src={`data:image/jpeg;base64,${submission.image}`} alt="Card cap"></img>
           <div className="card-body">
             <h5 className="card-title">{submission.name}</h5>
             <p className="card-text text-muted">{submission.createdAt}</p>
@@ -36,9 +36,9 @@ const Submissions = (props) => {
           )
         })
         ) : (
-          <div class="clearfix p-5 m-5">
-            <div class="spinner-border float-left" role="status">
-              <span class="sr-only">Loading...</span>
+          <div className="clearfix p-5 m-5">
+            <div className="spinner-border float-left" role="status">
+              <span className="sr-only">Loading...</span>
             </div>
           </div>
           )

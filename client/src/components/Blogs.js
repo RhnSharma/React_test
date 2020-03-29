@@ -42,15 +42,15 @@ const Blogs = (props) => {
             <p className='card-subtitle mb-2 text-danger'>{post.description}</p>
             <Link to={`/blog/${post.slug}`} className='btn btn-secondary p-1'>Read more</Link>
             <Link to={`/editblog/${post.slug}`} className='btn btn-primary mx-2 p-1'>Edit Post</Link>
-            <a onClick={() => deletePost(post.slug)} className='btn btn-danger p-1'>Delete Post</a>
+            <button onClick={() => deletePost(post.slug)} className='btn btn-danger p-1'>Delete Post</button>
             </div>
             </div>
           ) 
         })
         ) : (
-          <div class="clearfix p-5 m-5">
-            <div class="spinner-border float-left" role="status">
-              <span class="sr-only">Loading...</span>
+          <div className="clearfix p-5 m-5">
+            <div className="spinner-border float-left" role="status">
+              <span className="sr-only">Loading...</span>
             </div>
           </div>
           )

@@ -27,9 +27,9 @@ const Blog = (props) => {
         <Link to='/blogs' className='lead mb-5' style={{'textDecoration':'none'}}><IoIosArrowBack />Go back</Link>
         {post.length === 0 ?
          (
-          <div class="clearfix p-5 m-5">
-          <div class="spinner-border float-left" role="status">
-            <span class="sr-only">Loading...</span>
+          <div className="clearfix p-5 m-5">
+          <div className="spinner-border float-left" role="status">
+            <span className="sr-only">Loading...</span>
           </div>
         </div>
         ) : 
