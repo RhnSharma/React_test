@@ -11,7 +11,7 @@ html {
 .home {
   background-color: transparent !important;
   height: 90vh;
-  margin-top: 5vh;
+  margin: 5vh 0;
 }
 .App {
   background-color: #0e0e0e;
@@ -44,9 +44,6 @@ footer p{
   color: red;
   margin: 1%;
 }
-/* .profile-image{
-  max-height: 400px;
-} */
 .projectthumbnail {
   box-shadow: -3px -3px 5px #ffffff70, 3px 3px 15px #00000090;
 }
