@@ -15,7 +15,8 @@ const ContactPage = (props) => {
       image : '',
       submitted : false,
       errors : null,
-      isLoading: false
+      isLoading: false,
+      disabled: false
     }
     );
     let validationErrors;
@@ -31,7 +32,7 @@ const ContactPage = (props) => {
     }
     let handleSubmit = e => {
       e.preventDefault();
-      setUser({...user,isLoading:true})
+      setUser({...user, isLoading: true, disabled: true});
       const { name, email, message, image } = user;
       let formData = new FormData();
       formData.append('name', name);
@@ -40,8 +41,6 @@ const ContactPage = (props) => {
       formData.append('image', image);
       axios.post("/submit",formData)
       .then(result => {
-        console.log(result);
-        document.getElementById("exampleFile").value = "";
         setUser(    
           {
           name : '',
@@ -56,7 +55,7 @@ const ContactPage = (props) => {
       })
       .catch(err => {
         validationErrors = err.response.data;
-        setUser({...user, submitted : false, errors : validationErrors});
+        setUser({...user, submitted : false, errors : validationErrors, isLoading: false, disabled: false});
       });
     };
  const submission = user.submitted;
@@ -87,15 +86,15 @@ const ContactPage = (props) => {
       </FormGroup>
       <FormGroup>
         <Label for="exampleFile"> <IoMdImage style={{'marginRight':'2px'}} /> Image (Only .jpg and .png) : </Label>
-        <Input onChange= {onChangeForm} type="file" name="image" id="exampleFile" />
-        <p className='errorMessage lead'>{user.errors && user.errors.findIndex(x =>x.param === "image") !== -1 ? user.errors[user.errors.findIndex(x => x.param === "image")].msg : ''}</p>
+        <Input onChange= {onChangeForm} type="file" name="image" id="exampleFile"/>
+        {/* <p className='errorMessage lead'>{user.errors && user.errors.findIndex(x =>x.param === "image") !== -1 ? user.errors[user.errors.findIndex(x => x.param === "image")].msg : ''}</p> */}
       </FormGroup>
       <FormGroup>
         <Label for="exampleText"> <MdMessage style={{'marginRight':'2px'}} /> Message : </Label>
         <Input onChange={onChangeForm} type="textarea" name="message" value={user.message} id="exampleText" placeholder="Type your message here" />
         <p className='errorMessage lead'>{user.errors && user.errors.findIndex(x =>x.param === "message") !== -1 ? user.errors[user.errors.findIndex(x => x.param === "message")].msg : ''}</p>
       </FormGroup>
-      <Button onClick={handleSubmit}>{user.isLoading ? "Submitting..." : "Submit"}</Button>
+      <Button disabled={user.disabled} onClick={handleSubmit}>{user.isLoading ? "Submitting..." : "Submit"}</Button>
     </Form>
         </Col>
         </Row>

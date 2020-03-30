@@ -12,7 +12,6 @@ import Blog from './components/Blog';
 import AddBlog from './components/AddBlog';
 import EditBlog from './components/EditBlog';
 import WithAuth from './components/WithAuth';
-import AddUser from './components/AddUser';
 import Login from './components/login';
 import NotFound from './components/NotFound';
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -36,7 +35,6 @@ function App() {
      <Route path='/blog/:slug' component={Blog} />
      <Route path='/login' component={Login} />
      <Route path="/addblog" component={WithAuth(AddBlog)} />
-     <Route path="/adduser" component={AddUser} />
      <Route path="/editblog/:slug" component={WithAuth(EditBlog)} />
      <Route path="*" component={NotFound} />
      </Switch>
