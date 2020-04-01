@@ -15,7 +15,7 @@ html {
   margin-top: 15vh;
 }
 .App {
-  background-color: #0e0e0e;
+  background-color: #292929;
 }
 .socialicons a {
   padding-left: 5px;
@@ -84,28 +84,28 @@ footer p{
   color: goldenrod !important;
 }
 #login form {
-  border: 2px solid lightgrey;
+  border: 2px solid #292929;
   padding: 5%;
-  margin:5% 20%;
+  margin:4% 12%;
   border-radius: 5%;
-  background: white;
-  color: #000;
+  background: #3c3c3c;
+  color: #fff;
 }
 #addpost form {
-  border: 2px solid lightgrey;
+  border: 2px solid #292929;
   padding: 5%;
-  margin:5% 20%;
+  margin: 4% 12%;
   border-radius: 5%;
-  background: white;
-  color: #000;
+  background: #3c3c3c;
+  color: #fff;
 }
 #editpost form {
-  border: 2px solid lightgrey;
+  border: 2px solid #292929;
   padding: 5%;
-  margin:5% 20%;
+  margin:4% 12%;
   border-radius: 5%;
-  background: white;
-  color: #000;
+  background: #3c3c3c;
+  color: #fff;
 }
 /* xs */
 .profile-image {
