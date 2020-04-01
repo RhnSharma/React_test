@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Form, FormGroup, Label, Input, Container, Row, Col } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Container } from 'reactstrap';
 import axios from 'axios';
 import './../App.css';
 
@@ -41,16 +41,14 @@ const Login = (props) => {
     <div className='mt-5' style={{'minHeight' : '80vh'}}>
       {submission ? <p className='lead submitted'>User is registered in the db.</p> 
         : 
-      <Container className='mb-5' id='contact'>
-      <Row>
-      <Col md='8'>
+      <Container id='login'>
+      <Form>
       <h1 
       className='display-4 text-info' 
       style={{'marginLeft' : '-10px', 'marginBottom':'20px','fontSize':'2rem'}}
       >
       Login - 
       </h1>
-      <Form>
     <FormGroup className='mb-5'>
       <Label for="title"> Email : </Label>
       <Input onChange={onChangeForm} type="email" name="email" id="exampleemail" value={user.email} placeholder="Type your email here" />
@@ -61,8 +59,6 @@ const Login = (props) => {
     </FormGroup>
     <Button onClick={onSubmit}>Login</Button>
   </Form>
-      </Col>
-      </Row>
   </Container>
       }
     </div>

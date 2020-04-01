@@ -83,6 +83,30 @@ footer p{
 #brandName:hover{
   color: goldenrod !important;
 }
+#login form {
+  border: 2px solid lightgrey;
+  padding: 5%;
+  margin:5% 20%;
+  border-radius: 5%;
+  background: white;
+  color: #000;
+}
+#addpost form {
+  border: 2px solid lightgrey;
+  padding: 5%;
+  margin:5% 20%;
+  border-radius: 5%;
+  background: white;
+  color: #000;
+}
+#editpost form {
+  border: 2px solid lightgrey;
+  padding: 5%;
+  margin:5% 20%;
+  border-radius: 5%;
+  background: white;
+  color: #000;
+}
 /* xs */
 .profile-image {
   width: 250px;

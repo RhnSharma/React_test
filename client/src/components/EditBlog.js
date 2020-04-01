@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Form, FormGroup, Label, Input, Container, Row, Col } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Container } from 'reactstrap';
 import axios from 'axios';
 import './../App.css';
 
@@ -55,16 +55,14 @@ const EditBlog = (props) => {
     <div className='mt-5' style={{'minHeight' : '80vh'}}>
       {submission ? <p className='lead submitted'>Your post has been updated.</p> 
         : 
-      <Container className='mb-5' id='contact'>
-      <Row>
-      <Col md='8'>
+      <Container id='editpost'>
+      <Form>
       <h1 
       className='display-4 text-info' 
       style={{'marginLeft' : '-10px', 'marginBottom':'20px','fontSize':'2rem'}}
       >
       Update Post - 
       </h1>
-      <Form>
     <FormGroup className='mb-5'>
       <Label for="title"> Title : </Label>
       <Input onChange={onChangeForm} type="text" name="title" id="exampletitle" value={blog.title} placeholder="Type your post title here" />
@@ -82,8 +80,6 @@ const EditBlog = (props) => {
     <Button color='warning' onClick={handleSubmit}>Update post</Button>
     <Link to='/blogs' className='btn btn-secondary mx-2'>Cancel</Link>
   </Form>
-      </Col>
-      </Row>
   </Container>
       }
     </div>
