@@ -25,7 +25,15 @@ const Blogs = (props) => {
     }
     axios.delete(`/deleteblogpost/${slug}`, requestOptions)
     .then(res => console.log(res))
-    .catch(err => console.log(err)); 
+    .catch(err => 
+      {
+        console.log(err)
+        setTimeout(()=>{
+          document.getElementById(id).disabled = false;
+          document.getElementById(id).innerHTML = 'Delete Post';
+        },500);
+        document.getElementById(id).innerHTML = 'Unauthorized';
+      }); 
     setCounter(counter + 1);
   }
   return (
