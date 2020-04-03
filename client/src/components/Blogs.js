@@ -52,7 +52,7 @@ const Blogs = (props) => {
             <p className='card-subtitle mb-2 text-danger'>{post.description}</p>
             <Link to={`/blog/${post.slug}`} className='btn btn-secondary p-1'>Read more</Link>
             <Link to={`/editblog/${post.slug}`} className='btn btn-primary mx-2 p-1'>Edit Post</Link>
-            <button id={post._id} onClick={() => deletePost(post.slug,post._id)} className='btn btn-danger p-1'>Delete Post</button>
+            <button id={post._id} onClick={() => deletePost(post.slug,post._id)} className='btn btn-danger my-1 p-1'>Delete Post</button>
             </div>
             </div>
           ) 
