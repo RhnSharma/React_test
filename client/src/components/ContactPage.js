@@ -68,7 +68,7 @@ const ContactPage = (props) => {
         <Row>
         <Col md='8'>
         <h1 
-        className='display-4 text-info' 
+        className='display-4 text-info title' 
         style={{'marginLeft' : '-10px', 'marginBottom':'20px','fontSize':'2rem'}}
         >
        <IoMdContacts />  Contact Me

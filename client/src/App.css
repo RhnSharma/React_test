@@ -166,6 +166,34 @@ footer p{
   .home{
     margin-top: 25vh;
   }
+  #about{
+    padding: 0 15px;
+    margin: 0;
+  }
+  #about .title{
+ font-size: 1.5rem !important;
+  }
+  #about .content{
+ font-size: 1.3rem !important;
+  }
+  #contact {
+    padding: 0 15px;
+    margin: 0;
+  }
+  #contact .title{
+    font-size: 1.5rem !important;
+  }
+  #contact form{
+    padding: 0 15px;
+    margin: 0;
+  }
+  #projects{
+    padding: 0 15px;
+    margin: 0;
+  }
+  #projects .title {
+    font-size: 1.5rem !important;
+  }
 }
 @media (max-width : 435px){
   .maintext{
@@ -182,6 +210,18 @@ footer p{
   .subtext{
     font-size: 1.4rem !important;
   }
+  #about .title {
+    font-size: 1.4rem !important;
+  }
+  #about .content {
+    font-size : 1.2rem !important;
+}
+#contact .title {
+  font-size: 1.4rem !important;
+}
+#projects .title {
+  font-size: 1.4rem !important;
+}
 }
 @media (max-width : 320px){
   .maintext{
@@ -189,5 +229,8 @@ footer p{
   }
   .subtext{
     font-size: 1.2rem !important;
+  }
+  #about .content {
+    font-size: 1.1rem !important;
   }
 }
