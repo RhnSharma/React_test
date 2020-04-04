@@ -40,7 +40,7 @@ const Blogs = (props) => {
     <Container className='mb-5' id='blog'>
       <Row>
         <Col md="8">
-        <h1 className='display-4 text-primary' style={{'fontSize':'2rem'}}> <FaPenNib /> All Posts : </h1>
+        <h1 className='display-4 text-primary title' style={{'fontSize':'2rem'}}> <FaPenNib /> All Posts : </h1>
         { posts.length ? 
         (
         posts.map(post => {
