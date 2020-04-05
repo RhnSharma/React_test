@@ -20,7 +20,6 @@ const AddBlog = (props) => {
       const { email, password } = user;
       axios.post("/adduser",{ email, password })
       .then(result => {
-        console.log(result);
         setUser(    
         {
             email : '',

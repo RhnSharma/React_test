@@ -34,7 +34,6 @@ const EditBlog = (props) => {
       const { title, description, post } = blog;
       axios.post(`/editblogpost/${slug}`,{title, description, post})
       .then(result => {
-        console.log(result.data);
         setBlog(    
         {
             title : '',
