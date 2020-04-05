@@ -69,6 +69,10 @@ footer p{
   min-height: 80vh;
   margin-top: 4%;
 }
+#iblog{
+  min-height: 80vh;
+  margin-top: 4%;
+}
 #bloglink{
   color: white;
   text-decoration: none;
@@ -161,6 +165,15 @@ footer p{
   #blog .title {
     font-size: 1.8rem !important;
   }
+  #iblog .time {
+    font-size: 1rem !important;
+  }
+  #iblog .description {
+    font-size: 1.3rem !important;
+  }
+  #iblog .content {
+    font-size: 1.15rem !important;
+  }
 }
 @media (max-width : 530px){
   .maintext{
@@ -206,6 +219,9 @@ footer p{
   #blog .card{
     width: 85%;
   }
+  #iblog .title {
+    font-size: 2.5rem !important;
+  }
 }
 @media (max-width : 435px){
   .maintext{
@@ -219,6 +235,18 @@ footer p{
   }
   #blog .card {
     width: 90%;
+  }
+  #iblog .title {
+    font-size: 2rem !important;
+  }
+  #iblog .time {
+    font-size: 0.9rem !important;
+  }
+  #iblog .description {
+    font-size: 1rem !important;
+  }
+  #iblog .content {
+    font-size: 1rem !important;
   }
 }
 @media (max-width : 375px){

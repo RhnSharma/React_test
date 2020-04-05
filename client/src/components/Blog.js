@@ -10,18 +10,20 @@ const Blog = (props) => {
     const { match } = props;
     let { slug } = match.params;
   const [post, setPost] = useState([]);
-  // const [isLoading,setIsLoading] = useState(false);
   useEffect(()=> {
     axios.get(`/getBlog/${slug}`,{
       headers : {
         'type' : 'application/json'
       }
     })
-    .then(res => setPost(res.data))
+    .then(res => {
+      setPost(res.data);
+      document.querySelectorAll('img').forEach(el => el.classList.add('img-fluid'));
+    })
     .catch(err=>console.log(err));
   },[slug])
   return (
-    <Container className='mb-5' id='blog'>
+    <Container className='mb-5' id='iblog'>
       <Row>
         <Col md="8">
         <Link to='/blogs' className='lead mb-5' style={{'textDecoration':'none'}}><IoIosArrowBack />Go back</Link>
@@ -35,10 +37,10 @@ const Blog = (props) => {
         ) : 
         (
           <div>
-          <h1 className='display-4 mt-1 mb-3'>{post.title}</h1>
-          <div className='text-muted mb-3'><FaClock /> &nbsp; {post.createdAt}</div>
-          <h4 className='text-danger mb-3'>{post.description}</h4>
-          <div className='lead mb-3'
+          <h1 className='display-4 mt-1 mb-3 title'>{post.title}</h1>
+          <div className='text-muted mb-3 time'><FaClock /> &nbsp; {post.createdAt}</div>
+          <h4 className='text-danger mb-3 description'>{post.description}</h4>
+          <div className='lead mb-3 content'
            dangerouslySetInnerHTML={{
           __html: post.sanitizedHtml
             }}> 
