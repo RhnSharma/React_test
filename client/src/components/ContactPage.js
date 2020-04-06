@@ -64,7 +64,7 @@ const ContactPage = (props) => {
       {submission ? (
         <p className='lead submitted'>Thank you for submitting the form!</p>
       ) : (
-        <Container className='mb-5' id='contact'>
+        <Container className='mb-5 pt-2' id='contact'>
         <Row>
         <Col md='8'>
         <h1 

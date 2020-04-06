@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'reactstrap';
 import { FaClock } from 'react-icons/fa';
 import { IoIosArrowBack } from 'react-icons/io';
 import axios from 'axios';
+import TimeAgo from 'react-timeago';
 import './../App.css';
 
 const Blog = (props) => {
@@ -38,7 +39,7 @@ const Blog = (props) => {
         (
           <div>
           <h1 className='display-4 mt-1 mb-3 title'>{post.title}</h1>
-          <div className='text-muted mb-3 time'><FaClock /> &nbsp; {post.createdAt}</div>
+          <div className='text-muted mb-3 time'><FaClock /> &nbsp; <TimeAgo date={post.createdAt} /></div>
           <h4 className='text-danger mb-3 description'>{post.description}</h4>
           <div className='lead mb-3 content'
            dangerouslySetInnerHTML={{

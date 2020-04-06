@@ -6,7 +6,7 @@ import './../App.css';
 
 const AboutPage = (props) => {
   return (
-    <Container className='mb-5' id='about'>
+    <Container className='mb-5 pt-2' id='about'>
       <Row>
         <Col md="6">
         <h1 className='display-4 text-info title' style={{'fontSize':'2rem'}}> <IoMdPerson /> About Me</h1>

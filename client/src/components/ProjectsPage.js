@@ -8,7 +8,7 @@ import './../App.css';
 
 const ProjectsPage = (props) => {
   return (
-    <Container className='mb-5' id='projects'>
+    <Container className='mb-5 pt-2' id='projects'>
       <Row>
         <Col md="10">
         <h1 className='display-4 mb-3 text-info title' style={{'fontSize':'2rem'}}> <IoMdFolder /> Projects</h1>
