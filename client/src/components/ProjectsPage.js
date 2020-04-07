@@ -16,7 +16,7 @@ const ProjectsPage = (props) => {
           <img className="card-img-top" src={chatapp} alt="Chat app"></img>
           <div className="card-body">
             <h5 className="card-title">Chat App</h5>
-            <p className="card-text">It is a Chat Web application made using Nodejs and Socketio.</p>
+            <p className="card-text">A Chat-App made using Nodejs and Socket.io.</p>
             <div className='sub'> 
             <div className='subleft'>
             <p className='text-muted'>nodejs &nbsp; expressjs &nbsp; socketio</p>
@@ -32,7 +32,7 @@ const ProjectsPage = (props) => {
           <img className="card-img-top" src={calculator} alt="Calculator app"></img>
           <div className="card-body">
             <h5 className="card-title"> Javascript Calculator</h5>
-            <p className="card-text">It is a Calculator application made using Javascript.</p>
+            <p className="card-text">A Calculator Made Using Vanilla Javascript.</p>
             <div className='sub'> 
             <div className='subleft'>
             <p className='text-muted'>html &nbsp; css &nbsp; javascript</p>
