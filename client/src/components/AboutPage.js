@@ -9,8 +9,8 @@ const AboutPage = (props) => {
     <Container className='mb-5' id='about'>
       <Row>
         <Col md="6">
-        <h1 className='display-4 text-info title' style={{'fontSize':'2rem'}}> <IoMdPerson /> About Me</h1>
-        <p className='lead content'>An Engineer who design and develop full stack websites.</p>
+        <h1 className='display-4 text-info title' style={{'fontSize':'2rem'}}> <IoMdPerson />Who am I?</h1>
+        <p className='lead content'>A designer, a developer. Currently making websites!</p>
         </Col>
         <Col md="6" className='text-center'>
           <img src={profile} className='profile-image img-fluid rounded-circle' alt='profile'></img>
