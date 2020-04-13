@@ -19,7 +19,7 @@ var submissionSchema =  new mongoose.Schema({
     createdAt : {
         type : String
     },
-    new : {
+    newDoc : {
         type : Boolean,
         default : true
     }
