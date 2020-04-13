@@ -32,7 +32,7 @@ const ProjectsPage = (props) => {
           <img className="card-img-top" src={calculator} alt="Calculator app"></img>
           <div className="card-body">
             <h5 className="card-title"> Javascript Calculator</h5>
-            <p className="card-text">A Calculator Made Using Vanilla Javascript.</p>
+            <p className="card-text">A Calculator Made Using jQuery.</p>
             <div className='sub'> 
             <div className='subleft'>
             <p className='text-muted'>html &nbsp; css &nbsp; javascript</p>
