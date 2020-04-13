@@ -18,6 +18,10 @@ var submissionSchema =  new mongoose.Schema({
     },
     createdAt : {
         type : String
+    },
+    new : {
+        type : Boolean,
+        default : true
     }
 });
 
