@@ -54,7 +54,7 @@ const Blogs = (props) => {
     <Container className='mb-5' id='blog'>
       <Row>
         <Col md="8">
-        <h1 className='display-4 text-primary title' style={{'fontSize':'2rem'}}> <FaPenNib /> All Posts : </h1>
+        <h1 className='display-4 text-danger title' style={{'fontSize':'2rem'}}> <FaPenNib /> All Posts : </h1>
         { posts.length ? 
         (
         posts.map(post => {
@@ -63,7 +63,7 @@ const Blogs = (props) => {
             <div className='card-body'>
             <h1 className='card-title'>{post.title}</h1>
             <p className='card-subtitle mb-2 text-muted'><FaClock color='white'/>&nbsp; <TimeAgo date={post.createdAt} /></p>
-            <p className='card-subtitle mb-2 text-danger'>{post.description}</p>
+            <p className='card-subtitle mb-2 text-primary'>{post.description}</p>
             <Link to={`/blog/${post.slug}`} className='btn btn-secondary p-1'>Read more</Link>
             {
             show ? 

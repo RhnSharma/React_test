@@ -27,7 +27,7 @@ const Blog = (props) => {
     <Container className='mb-5' id='iblog'>
       <Row>
         <Col md="8">
-        <Link to='/blogs' className='lead mb-5' style={{'textDecoration':'none'}}><IoIosArrowBack />Go back</Link>
+        <Link to='/blogs' className='lead mb-5 text-danger' style={{'textDecoration':'none'}}><IoIosArrowBack />Go back</Link>
         {post.length === 0 ?
          (
           <div className="clearfix p-5 m-5">
@@ -40,7 +40,7 @@ const Blog = (props) => {
           <div>
           <h1 className='display-4 mt-1 mb-3 title'>{post.title}</h1>
           <div className='text-muted mb-3 time'><FaClock /> &nbsp; <TimeAgo date={post.createdAt} /></div>
-          <h4 className='text-danger mb-3 description'>{post.description}</h4>
+          <h4 className='text-primary mb-3 description'>{post.description}</h4>
           <div className='lead mb-3 content'
            dangerouslySetInnerHTML={{
           __html: post.sanitizedHtml

@@ -9,7 +9,7 @@ const AboutPage = (props) => {
     <Container className='mb-5 pt-2' id='about'>
       <Row>
         <Col md="6">
-        <h1 className='display-4 text-info title' style={{'fontSize':'2rem'}}> <IoMdPerson />Who am I?</h1>
+        <h1 className='display-4 text-danger title' style={{'fontSize':'2rem'}}> <IoMdPerson />Who am I?</h1>
         <p className='lead content'>A designer, a developer. Currently making websites!</p>
         </Col>
         <Col md="6" className='text-center'>

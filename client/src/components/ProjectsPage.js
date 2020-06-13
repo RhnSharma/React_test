@@ -12,7 +12,7 @@ const ProjectsPage = (props) => {
     <Container className='mb-5 pt-2' id='projects'>
       <Row>
         <Col md="10">
-        <h1 className='display-4 mb-3 text-info title' style={{'fontSize':'2rem'}}> <IoMdFolder /> Projects</h1>
+        <h1 className='display-4 mb-3 text-danger title' style={{'fontSize':'2rem'}}> <IoMdFolder /> Projects</h1>
         <div className="card text-white bg-dark mb-4">
           <img className="card-img-top" src={mailerapp} alt="Mailer app"></img>
           <div className="card-body">
