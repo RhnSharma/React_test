@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
-#root{
-    font-family: 'Poppins';
-  }
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+#root {
+  font-family: "Poppins";
+}
 html {
   scroll-behavior: smooth;
 }
@@ -20,35 +20,27 @@ html {
 .socialicons a {
   padding-left: 5px;
 }
-.brandName:hover{
-color : goldenrod !important;
-}
-.navlink{
-  color: white !important;
-}
-.navlink:hover{
-  color: goldenrod !important;
-}
-footer p{
+
+footer p {
   color: #000 !important;
   font-weight: bold;
   margin: auto;
 }
-.submitted{
+.submitted {
   color: red;
   margin: 10% 25%;
   border: 2px solid red;
   font-size: 2rem !important;
   padding: 4%;
 }
-.errorMessage{
+.errorMessage {
   color: red;
   margin: 1%;
 }
 .projectthumbnail {
   box-shadow: -3px -3px 5px #ffffff70, 3px 3px 15px #00000090;
 }
-#users{
+#users {
   min-height: 80vh;
   margin-top: 4%;
 }
@@ -61,36 +53,61 @@ footer p{
 .link:hover {
   color: red !important;
 }
-.sub{
+.react-switch-checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.react-switch-label {
+  margin: 2% 0 0 0;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 40px;
+  height: 20px;
+  background: grey;
+  border-radius: 100px;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.react-switch-label .react-switch-button {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 15px;
+  height: 16px;
+  border-radius: 45px;
+  transition: 0.2s;
+  background: #fff;
+  box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+}
+
+.react-switch-checkbox:checked + .react-switch-label .react-switch-button {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+.react-switch-label:active .react-switch-button {
+  width: 60px;
+}
+.sub {
   display: flex;
   justify-content: space-between;
 }
-#blog{
+#blog {
   min-height: 80vh;
   margin-top: 4%;
 }
-#iblog{
+#iblog {
   min-height: 80vh;
   margin-top: 4%;
-}
-#bloglink{
-  color: white;
-  text-decoration: none;
-}
-#bloglink:hover{
-  color: goldenrod !important;
-}
-#brandName{
-  color: white;
-  text-decoration: none;
-}
-#brandName:hover{
-  color: goldenrod !important;
 }
 #login form {
   border: 2px solid #292929;
   padding: 5%;
-  margin:4% 12%;
+  margin: 4% 12%;
   border-radius: 5%;
   background: #3c3c3c;
   color: #fff;
@@ -106,7 +123,7 @@ footer p{
 #editpost form {
   border: 2px solid #292929;
   padding: 5%;
-  margin:4% 12%;
+  margin: 4% 12%;
   border-radius: 5%;
   background: #3c3c3c;
   color: #fff;
@@ -120,43 +137,43 @@ footer p{
 /* sm */
 @media (min-width: 768px) {
   .profile-image {
-      width: 300px;
+    width: 300px;
   }
 }
 /* md */
 @media (min-width: 992px) {
   .profile-image {
-      width: 350px;
+    width: 350px;
   }
 }
 /* lg */
 @media (min-width: 1200px) {
   .profile-image {
-      width: 400px;
+    width: 400px;
   }
 }
 
-@media (max-width : 1024px){
-.home {
-  margin-top: 20vh;
-}
-}
-@media (max-width : 800px){
-  .maintext{
-    font-size: 3rem !important;
-  }
-  .subtext{
-    font-size: 2rem !important;
-  }
-  .home{
+@media (max-width: 1024px) {
+  .home {
     margin-top: 20vh;
   }
 }
-@media (max-width : 660px){
-  .maintext{
+@media (max-width: 800px) {
+  .maintext {
+    font-size: 3rem !important;
+  }
+  .subtext {
+    font-size: 2rem !important;
+  }
+  .home {
+    margin-top: 20vh;
+  }
+}
+@media (max-width: 660px) {
+  .maintext {
     font-size: 2.5rem !important;
   }
-  .subtext{
+  .subtext {
     font-size: 2rem !important;
   }
   #blog .card {
@@ -175,59 +192,59 @@ footer p{
     font-size: 1.15rem !important;
   }
 }
-@media (max-width : 530px){
-  .maintext{
+@media (max-width: 530px) {
+  .maintext {
     font-size: 2rem !important;
   }
-  .subtext{
+  .subtext {
     font-size: 1.8rem !important;
   }
-  .home{
+  .home {
     margin-top: 25vh;
   }
-  #about{
+  #about {
     padding: 0 15px;
     margin: 0;
   }
-  #about .title{
- font-size: 1.5rem !important;
+  #about .title {
+    font-size: 1.5rem !important;
   }
-  #about .content{
- font-size: 1.3rem !important;
+  #about .content {
+    font-size: 1.3rem !important;
   }
   #contact {
     padding: 0 15px;
     margin: 0;
   }
-  #contact .title{
+  #contact .title {
     font-size: 1.5rem !important;
   }
-  #contact form{
+  #contact form {
     padding: 0 15px;
     margin: 0;
   }
-  #projects{
+  #projects {
     padding: 0 15px;
     margin: 0;
   }
   #projects .title {
     font-size: 1.5rem !important;
   }
-  #blog .title{
+  #blog .title {
     font-size: 1.6rem !important;
   }
-  #blog .card{
+  #blog .card {
     width: 85%;
   }
   #iblog .title {
     font-size: 2.5rem !important;
   }
 }
-@media (max-width : 435px){
-  .maintext{
+@media (max-width: 435px) {
+  .maintext {
     font-size: 1.8rem !important;
   }
-  .subtext{
+  .subtext {
     font-size: 1.6rem !important;
   }
   #blog .title {
@@ -249,37 +266,37 @@ footer p{
     font-size: 1rem !important;
   }
 }
-@media (max-width : 375px){
-  .maintext{
+@media (max-width: 375px) {
+  .maintext {
     font-size: 1.6rem !important;
   }
-  .subtext{
+  .subtext {
     font-size: 1.4rem !important;
   }
   #about .title {
     font-size: 1.4rem !important;
   }
   #about .content {
-    font-size : 1.2rem !important;
-}
-#contact .title {
-  font-size: 1.4rem !important;
-}
-#projects .title {
-  font-size: 1.4rem !important;
-}
-#blog .title {
-  font-size: 1.4rem !important;
-}
-#blog .card {
-  width: 95%;
-}
-}
-@media (max-width : 320px){
-  .maintext{
+    font-size: 1.2rem !important;
+  }
+  #contact .title {
     font-size: 1.4rem !important;
   }
-  .subtext{
+  #projects .title {
+    font-size: 1.4rem !important;
+  }
+  #blog .title {
+    font-size: 1.4rem !important;
+  }
+  #blog .card {
+    width: 95%;
+  }
+}
+@media (max-width: 320px) {
+  .maintext {
+    font-size: 1.4rem !important;
+  }
+  .subtext {
     font-size: 1.2rem !important;
   }
   #about .content {
