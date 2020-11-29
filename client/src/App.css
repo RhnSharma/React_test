@@ -132,7 +132,14 @@ footer p {
 .profile-image {
   width: 250px;
   height: auto;
-  box-shadow: -3px -3px 5px #ffffff70, 3px 3px 15px #00000090;
+}
+.blogs-image {
+  width: 280px;
+  height: auto;
+}
+.notfound {
+  width: 350px;
+  height: auto;
 }
 /* sm */
 @media (min-width: 768px) {

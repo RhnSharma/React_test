@@ -29,21 +29,6 @@ const GlobalStyle = createGlobalStyle`
   #brandName{
     color: ${(props) => (props.theme.mode === "dark" ? "white" : "black")}
   }
-  .navlink{
-    color: ${(props) => (props.theme.mode === "dark" ? "white" : "black ")}
-  }
-  .nav-link{
-    color: ${(props) => (props.theme.mode === "dark" ? "white" : "black")}
-  }
-  .navlink:hover{
-    color: ${(props) => (props.theme.mode === "dark" ? "red" : "#143fde")}
-  }
-  #bloglink{
-    color: ${(props) => (props.theme.mode === "dark" ? "white" : "black")}
-  }
-  #bloglink:hover{
-    color: ${(props) => (props.theme.mode === "dark" ? "red" : "#143fde")}
-  }
   #brandName{
     color: ${(props) => (props.theme.mode === "dark" ? "white" : "black")}
   }
@@ -96,7 +81,7 @@ function App() {
                 </label>
               </div>
             </div>
-            <TopNav />
+            <TopNav theme={theme} />
             <Switch>
               <Route
                 path="/"
@@ -111,7 +96,7 @@ function App() {
                 )}
               />
               <Route path="/submissions" component={WithAuth(Submissions)} />
-              <Route path="/blogs" component={Blogs} />
+              <Route path="/blogs" component={() => <Blogs theme={theme} />} />
               <Route path="/blog/:slug" component={Blog} />
               <Route path="/login" component={Login} />
               <Route path="/addblog" component={WithAuth(AddBlog)} />

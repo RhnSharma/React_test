@@ -4,9 +4,10 @@ import { Container, Row, Col } from "reactstrap";
 import { FaPenNib, FaClock } from "react-icons/fa";
 import axios from "axios";
 import TimeAgo from "react-timeago";
+import blogs from "../images/blogs.svg";
 import "./../App.css";
 
-const Blogs = (props) => {
+const Blogs = ({ theme }) => {
   const [posts, setPosts] = useState([]);
   const [counter, setCounter] = useState(0);
   const [show, setShow] = useState(false);
@@ -35,13 +36,15 @@ const Blogs = (props) => {
 
   const deletePost = (slug, id) => {
     document.getElementById(id).disabled = true;
-    document.getElementById(id).innerHTML = "Deleting...";
     const requestOptions = {
       method: "DELETE",
     };
     axios
       .delete(`/deleteblogpost/${slug}`, requestOptions)
-      .then((res) => console.log(res))
+      .then((res) => {
+        posts.filter((post) => post.id === id);
+        console.log(res);
+      })
       .catch((err) => {
         console.log(err);
         setTimeout(() => {
@@ -55,19 +58,62 @@ const Blogs = (props) => {
   return (
     <Container className="mb-5" id="blog">
       <Row>
+        <Col md="4" className="text-center mt-5 mb-4">
+          <img
+            src={blogs}
+            className="blogs-image img-fluid mt-5"
+            alt="profile"
+          ></img>
+        </Col>
         <Col md="8">
           <h1 className="display-4 name title" style={{ fontSize: "2rem" }}>
-            {" "}
-            <FaPenNib /> All Posts :{" "}
+            <FaPenNib />
+            All Posts :
           </h1>
           {posts.length ? (
             posts.map((post) => {
-              return (
+              return theme.mode === "dark" ? (
                 <div key={post._id} className="card bg-dark text-white mt-4">
                   <div className="card-body">
                     <h1 className="card-title">{post.title}</h1>
                     <p className="card-subtitle mb-2 text-muted">
                       <FaClock color="white" />
+                      &nbsp; <TimeAgo date={post.createdAt} />
+                    </p>
+                    <p className="card-subtitle mb-2 text-primary">
+                      {post.description}
+                    </p>
+                    <Link
+                      to={`/blog/${post.slug}`}
+                      className="btn btn-secondary p-1"
+                    >
+                      Read more
+                    </Link>
+                    {show ? (
+                      <>
+                        <Link
+                          to={`/editblog/${post.slug}`}
+                          className="btn btn-primary mx-2 p-1"
+                        >
+                          Edit Post
+                        </Link>
+                        <button
+                          id={post._id}
+                          onClick={() => deletePost(post.slug, post._id)}
+                          className="btn btn-danger my-1 p-1"
+                        >
+                          Delete Post
+                        </button>
+                      </>
+                    ) : null}
+                  </div>
+                </div>
+              ) : (
+                <div key={post._id} className="card mt-4">
+                  <div className="card-body">
+                    <h1 className="card-title">{post.title}</h1>
+                    <p className="card-subtitle mb-2 text-muted">
+                      <FaClock color="black" />
                       &nbsp; <TimeAgo date={post.createdAt} />
                     </p>
                     <p className="card-subtitle mb-2 text-primary">

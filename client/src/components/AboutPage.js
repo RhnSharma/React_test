@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import profile from "../images/myimage.jpg";
+import profile from "../images/myimage.svg";
 import { IoMdPerson } from "react-icons/io";
 import "./../App.css";
 
@@ -20,7 +20,7 @@ const AboutPage = (props) => {
         <Col md="6" className="text-center">
           <img
             src={profile}
-            className="profile-image img-fluid rounded-circle"
+            className="profile-image img-fluid"
             alt="profile"
           ></img>
         </Col>
