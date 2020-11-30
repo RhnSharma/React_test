@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
-import { FaPenNib, FaClock } from "react-icons/fa";
+import { FaClock } from "react-icons/fa";
 import axios from "axios";
 import TimeAgo from "react-timeago";
 import blogs from "../images/blogs.svg";
@@ -66,10 +66,17 @@ const Blogs = ({ theme }) => {
           ></img>
         </Col>
         <Col md="8">
-          <h1 className="display-4 name title" style={{ fontSize: "2rem" }}>
-            <FaPenNib />
-            All Posts :
-          </h1>
+          {show && (
+            <div className="text-center rounded-circle addblog">
+              {" "}
+              <Link
+                to={`/addblog`}
+                className="text-center rounded-circle addblog"
+              >
+                +
+              </Link>
+            </div>
+          )}
           {posts.length ? (
             posts.map((post) => {
               return theme.mode === "dark" ? (

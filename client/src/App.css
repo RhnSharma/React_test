@@ -11,7 +11,6 @@ html {
 }
 .home {
   background-color: transparent !important;
-  height: 100vh;
   margin-top: 10vh;
 }
 .App {
@@ -141,6 +140,21 @@ footer p {
   width: 350px;
   height: auto;
 }
+.card {
+  background-color: #eceae3 !important;
+}
+.addblog {
+  background-color: red;
+  width: 36px;
+  height: 36px;
+  color: rgb(216, 216, 216);
+  font-size: x-large;
+  margin: 0 auto;
+}
+.addblog:hover {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
 /* sm */
 @media (min-width: 768px) {
   .profile-image {
@@ -207,7 +221,7 @@ footer p {
     font-size: 1.8rem !important;
   }
   .home {
-    margin-top: 25vh;
+    margin-top: 30.75vh;
   }
   #about {
     padding: 0 15px;

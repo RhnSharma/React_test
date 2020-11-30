@@ -90,8 +90,8 @@ function App() {
                   <Fragment>
                     <HomePage />
                     <AboutPage />
-                    <ContactPage />
                     <ProjectsPage />
+                    <ContactPage />
                   </Fragment>
                 )}
               />
