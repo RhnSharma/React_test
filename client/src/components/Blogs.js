@@ -116,7 +116,7 @@ const Blogs = ({ theme }) => {
                   </div>
                 </div>
               ) : (
-                <div key={post._id} className="card mt-4">
+                <div key={post._id} className="card lightcard mt-4">
                   <div className="card-body">
                     <h1 className="card-title">{post.title}</h1>
                     <p className="card-subtitle mb-2 text-muted">

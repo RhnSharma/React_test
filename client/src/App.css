@@ -140,8 +140,8 @@ footer p {
   width: 350px;
   height: auto;
 }
-.card {
-  background-color: #eceae3 !important;
+.lightcard {
+  background-color: #e8e8e8 !important;
 }
 .addblog {
   background-color: red;
