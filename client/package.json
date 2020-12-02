@@ -16,8 +16,7 @@
     "react-scripts": "3.4.0",
     "react-timeago": "^4.4.0",
     "reactstrap": "^8.4.1",
-    "styled-components": "^5.2.1",
-    "styled-theming": "^2.2.0"
+    "styled-components": "^5.2.1"
   },
   "scripts": {
     "start": "react-scripts start",

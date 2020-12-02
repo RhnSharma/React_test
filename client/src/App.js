@@ -35,6 +35,16 @@ const GlobalStyle = createGlobalStyle`
   #brandName:hover{
     color: ${(props) => (props.theme.mode === "dark" ? "red" : "#143fde")}
   }
+  #themetoggle{
+    color: ${(props) => (props.theme.mode === "dark" ? "#f13434" : "#143fde")};
+    background-color: ${(props) =>
+      props.theme.mode === "dark" ? "#000" : "#f6f6f8"};
+    border: ${(props) =>
+      props.theme.mode === "dark" ? "1px solid #f13434" : "1px solid #143fde"};
+  }
+  #themetoggle:focus{
+    outline: ${(props) => (props.theme.mode === "dark" ? "0" : "0")};
+  }
 `;
 
 function getInitialTheme() {
@@ -53,35 +63,7 @@ function App() {
         <>
           <GlobalStyle />
           <div className="App">
-            <div style={{ display: "flex" }}>
-              <div style={{ flex: 1 }}></div>
-              <div style={{ marginRight: "1%" }}>
-                {theme.mode === "light" ? (
-                  <span>Switch to dark mode &nbsp; </span>
-                ) : (
-                  <span>Switch to light mode &nbsp; </span>
-                )}
-                <input
-                  onClick={() => {
-                    if (theme.mode === "light") {
-                      setTheme({ mode: "dark" });
-                    } else {
-                      setTheme({ mode: "light" });
-                    }
-                  }}
-                  className="react-switch-checkbox"
-                  id={`react-switch-new`}
-                  type="checkbox"
-                />
-                <label
-                  className="react-switch-label"
-                  htmlFor={`react-switch-new`}
-                >
-                  <span className={`react-switch-button`} />
-                </label>
-              </div>
-            </div>
-            <TopNav theme={theme} />
+            <TopNav setTheme={setTheme} theme={theme} />
             <Switch>
               <Route
                 path="/"

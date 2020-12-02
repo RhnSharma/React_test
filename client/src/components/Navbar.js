@@ -10,7 +10,7 @@ import {
 } from "reactstrap";
 import "./../App.css";
 
-const TopNav = ({ theme }) => {
+const TopNav = ({ theme, setTheme }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -26,11 +26,27 @@ const TopNav = ({ theme }) => {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
               {location.pathname !== "/" ? (
-                <NavItem>
-                  <Link to="/" className="navlink nav-link">
-                    Home
-                  </Link>
-                </NavItem>
+                <div className="themeswitch">
+                  <NavItem>
+                    <Link to="/" className="navlink nav-link">
+                      Home
+                    </Link>
+                  </NavItem>
+                  <NavItem className="nav-link">
+                    <button
+                      id="themetoggle"
+                      onClick={() => {
+                        theme.mode === "light"
+                          ? setTheme({ mode: "dark" })
+                          : setTheme({ mode: "light" });
+                      }}
+                    >
+                      {theme.mode === "light"
+                        ? "Switch to dark mode"
+                        : "Switch to light mode"}
+                    </button>
+                  </NavItem>
+                </div>
               ) : (
                 <>
                   <NavItem>
@@ -52,6 +68,20 @@ const TopNav = ({ theme }) => {
                     <Link className="nav-link" to="/blogs">
                       Blog
                     </Link>
+                  </NavItem>
+                  <NavItem className="nav-link">
+                    <button
+                      id="themetoggle"
+                      onClick={() => {
+                        theme.mode === "light"
+                          ? setTheme({ mode: "dark" })
+                          : setTheme({ mode: "light" });
+                      }}
+                    >
+                      {theme.mode === "light"
+                        ? "Switch to dark mode"
+                        : "Switch to light mode"}
+                    </button>
                   </NavItem>
                 </>
               )}
@@ -67,11 +97,27 @@ const TopNav = ({ theme }) => {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
               {location.pathname !== "/" ? (
-                <NavItem>
-                  <Link to="/" className="navlink nav-link">
-                    Home
-                  </Link>
-                </NavItem>
+                <div className="themeswitch">
+                  <NavItem>
+                    <Link to="/" className="navlink nav-link">
+                      Home
+                    </Link>
+                  </NavItem>
+                  <NavItem className="nav-link">
+                    <button
+                      id="themetoggle"
+                      onClick={() => {
+                        theme.mode === "light"
+                          ? setTheme({ mode: "dark" })
+                          : setTheme({ mode: "light" });
+                      }}
+                    >
+                      {theme.mode === "light"
+                        ? "Switch to dark mode"
+                        : "Switch to light mode"}
+                    </button>
+                  </NavItem>
+                </div>
               ) : (
                 <>
                   <NavItem>
@@ -93,6 +139,20 @@ const TopNav = ({ theme }) => {
                     <Link className="nav-link" to="/blogs">
                       Blog
                     </Link>
+                  </NavItem>
+                  <NavItem className="nav-link">
+                    <button
+                      id="themetoggle"
+                      onClick={() => {
+                        theme.mode === "light"
+                          ? setTheme({ mode: "dark" })
+                          : setTheme({ mode: "light" });
+                      }}
+                    >
+                      {theme.mode === "light"
+                        ? "Switch to dark mode"
+                        : "Switch to light mode"}
+                    </button>
                   </NavItem>
                 </>
               )}
