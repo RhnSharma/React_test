@@ -59,6 +59,9 @@ footer p {
 .themeswitch {
   display: flex;
 }
+#themetogglemobile {
+  display: none;
+}
 #blog {
   min-height: 80vh;
   margin-top: 4%;
@@ -157,6 +160,13 @@ footer p {
 @media (max-width: 767px) {
   .themeswitch {
     display: block;
+  }
+  #themetoggle {
+    display: none;
+  }
+  #themetogglemobile {
+    display: block;
+    margin: 0 auto;
   }
 }
 @media (max-width: 660px) {

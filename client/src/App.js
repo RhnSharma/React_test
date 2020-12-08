@@ -45,6 +45,21 @@ const GlobalStyle = createGlobalStyle`
   #themetoggle:focus{
     outline: ${(props) => (props.theme.mode === "dark" ? "0" : "0")};
   }
+  #themetogglemobile{
+    color: ${(props) => (props.theme.mode === "dark" ? "#f13434" : "#143fde")};
+    background-color: ${(props) =>
+      props.theme.mode === "dark" ? "#000" : "#f6f6f8"};
+    border: ${(props) =>
+      props.theme.mode === "dark" ? "1px solid #f13434" : "1px solid #143fde"};
+  }
+  #themetogglemobile:focus{
+    outline: ${(props) => (props.theme.mode === "dark" ? "0" : "0")};
+  }
+  pre {
+    color: ${(props) => (props.theme.mode === "dark" ? "#000" : "#000")};
+    background-color: ${(props) =>
+      props.theme.mode === "dark" ? "#fffbff" : "#dedede"};
+  }
 `;
 
 function getInitialTheme() {
@@ -63,6 +78,20 @@ function App() {
         <>
           <GlobalStyle />
           <div className="App">
+            <div style={{ textAlign: "center" }}>
+              <button
+                id="themetogglemobile"
+                onClick={() => {
+                  theme.mode === "light"
+                    ? setTheme({ mode: "dark" })
+                    : setTheme({ mode: "light" });
+                }}
+              >
+                {theme.mode === "light"
+                  ? "Switch to dark mode"
+                  : "Switch to light mode"}
+              </button>
+            </div>
             <TopNav setTheme={setTheme} theme={theme} />
             <Switch>
               <Route
