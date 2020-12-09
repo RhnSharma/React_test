@@ -11,7 +11,7 @@ const ProjectsPage = (props) => {
   return (
     <Container className="mb-5 pt-2" id="projects">
       <Row>
-        <Col md="10">
+        <Col md="8">
           <h1
             className="display-4 mb-3 name title"
             style={{ fontSize: "2rem" }}

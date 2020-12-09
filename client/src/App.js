@@ -20,8 +20,9 @@ import storage from "local-storage-fallback";
 const GlobalStyle = createGlobalStyle`
   .App {
     background-color: ${(props) =>
-      props.theme.mode === "dark" ? "#000" : "#f6f6f8"};
-    color : ${(props) => (props.theme.mode === "dark" ? "#fff" : "#000")}
+      props.theme.mode === "dark" ? "#121212" : "rgb(255 255 255 / 0.87)"};
+    color : ${(props) =>
+      props.theme.mode === "dark" ? "rgb(255 255 255 / 0.87)" : "#121212"}
   }
   .name {
     color : ${(props) => (props.theme.mode === "dark" ? "#f13434" : "#143fde")}
@@ -58,7 +59,11 @@ const GlobalStyle = createGlobalStyle`
   pre {
     color: ${(props) => (props.theme.mode === "dark" ? "#000" : "#000")};
     background-color: ${(props) =>
-      props.theme.mode === "dark" ? "#fffbff" : "#dedede"};
+      props.theme.mode === "dark" ? "rgba(255,255,255, 0.87)" : "#dedede"};
+    padding: ${(props) => (props.theme.mode === "dark" ? "0 20px" : "0 20px")};
+          white-space: ${(props) =>
+            props.theme.mode === "dark" ? "pre-line" : "pre-line"};
+    
   }
 `;
 
