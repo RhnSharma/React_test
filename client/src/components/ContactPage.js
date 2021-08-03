@@ -11,7 +11,7 @@ import {
 } from "reactstrap";
 import { FaUserAlt } from "react-icons/fa";
 import { MdEmail, MdMessage } from "react-icons/md";
-import { IoMdImage, IoMdContacts } from "react-icons/io";
+import { IoMdContacts } from "react-icons/io";
 import axios from "axios";
 import "./../App.css";
 
@@ -20,7 +20,6 @@ const ContactPage = (props) => {
     name: "",
     email: "",
     message: "",
-    image: "",
     submitted: false,
     errors: null,
     isLoading: false,
@@ -29,31 +28,19 @@ const ContactPage = (props) => {
   let validationErrors;
   let onChangeForm = (e) => {
     e.preventDefault();
-    switch (e.target.name) {
-      case "image":
-        setUser({ ...user, [e.target.name]: e.target.files[0] });
-        break;
-      default:
-        setUser({ ...user, [e.target.name]: e.target.value });
-    }
+    setUser({ ...user, [e.target.name]: e.target.value });
   };
   let handleSubmit = (e) => {
     e.preventDefault();
     setUser({ ...user, isLoading: true, disabled: true });
-    const { name, email, message, image } = user;
-    let formData = new FormData();
-    formData.append("name", name);
-    formData.append("email", email);
-    formData.append("message", message);
-    formData.append("image", image);
+    const { name, email, message } = user;
     axios
-      .post("/submit", formData)
-      .then((result) => {
+      .post("/submit", { name, email, message })
+      .then(() => {
         setUser({
           name: "",
           email: "",
           message: "",
-          image: "",
           submitted: true,
           errors: null,
           isLoading: false,
@@ -133,20 +120,6 @@ const ContactPage = (props) => {
                         ].msg
                       : ""}
                   </p>
-                </FormGroup>
-                <FormGroup>
-                  <Label for="exampleFile">
-                    {" "}
-                    <IoMdImage style={{ marginRight: "2px" }} /> Image (Only
-                    .jpg and .png) :{" "}
-                  </Label>
-                  <Input
-                    onChange={onChangeForm}
-                    type="file"
-                    name="image"
-                    id="exampleFile"
-                  />
-                  {/* <p className='errorMessage lead'>{user.errors && user.errors.findIndex(x =>x.param === "image") !== -1 ? user.errors[user.errors.findIndex(x => x.param === "image")].msg : ''}</p> */}
                 </FormGroup>
                 <FormGroup>
                   <Label for="exampleText">

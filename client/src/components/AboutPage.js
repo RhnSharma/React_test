@@ -4,7 +4,7 @@ import profile from "../images/myimage.svg";
 import { IoMdPerson } from "react-icons/io";
 import "./../App.css";
 
-const AboutPage = (props) => {
+const AboutPage = () => {
   return (
     <Container className="mb-5 pt-2" id="about">
       <Row>
