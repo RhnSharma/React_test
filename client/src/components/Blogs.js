@@ -129,7 +129,19 @@ const Blogs = ({ theme }) => {
                   </div>
                 </motion.div>
               ) : (
-                <div key={post._id} className="card lightcard mt-4">
+                <motion.div
+                  initial={{ scale: 0.5 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.3 }}
+                  whileHover={{
+                    scale: 1.05,
+                    originX: 0,
+                  }}
+                  drag="x"
+                  dragConstraints={{ left: 0, right: 200 }}
+                  key={post._id}
+                  className="card bg-dark text-white mt-4"
+                >
                   <div className="card-body">
                     <h1 className="card-title">{post.title}</h1>
                     <p className="card-subtitle mb-2 text-muted">
@@ -163,7 +175,7 @@ const Blogs = ({ theme }) => {
                       </>
                     ) : null}
                   </div>
-                </div>
+                </motion.div>
               );
             })
           ) : (
