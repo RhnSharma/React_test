@@ -28,7 +28,6 @@ router.post("/", withAuth, async (req, res) => {
     blog.title = req.body.title;
     blog.description = req.body.description;
     blog.post = req.body.post;
-    blog.createdAt = new Date(Date.now()).toString();
     blog
       .save()
       .then((data) => {

@@ -18,9 +18,6 @@ var blogSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  createdAt: {
-    type: String,
-  },
   slug: {
     type: String,
     required: true,
@@ -29,8 +26,8 @@ var blogSchema = new mongoose.Schema({
   sanitizedHtml: {
     type: String,
     required: true,
-  },
-});
+  }
+}, {timestamps:true});
 
 blogSchema.pre("validate", function (next) {
   if (this.title) {
