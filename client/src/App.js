@@ -56,15 +56,6 @@ const GlobalStyle = createGlobalStyle`
   #themetogglemobile:focus{
     outline: ${(props) => (props.theme.mode === "dark" ? "0" : "0")};
   }
-  pre {
-    color: ${(props) => (props.theme.mode === "dark" ? "#000" : "#000")};
-    background-color: ${(props) =>
-      props.theme.mode === "dark" ? "rgba(255,255,255, 0.87)" : "#dedede"};
-    padding: ${(props) => (props.theme.mode === "dark" ? "0 20px" : "0 20px")};
-          white-space: ${(props) =>
-            props.theme.mode === "dark" ? "pre-line" : "pre-line"};
-    
-  }
 `;
 
 function getInitialTheme() {

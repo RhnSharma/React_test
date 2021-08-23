@@ -18,6 +18,7 @@ router.use(compression());
 router.post('/:slug', withAuth, async (req,res)=>{
 
 req.check('title','Invalid title').trim().isLength({min:2});
+req.check("description", "Invalid description").trim().isLength({ min: 2 });
 req.check('post','Invalid post body').trim().isLength({min:1});
 
 let errors = req.validationErrors();

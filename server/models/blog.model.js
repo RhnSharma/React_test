@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const marked = require("marked");
 const slugify = require("slugify");
 const createDomPurify = require("dompurify");
 const { JSDOM } = require("jsdom");
@@ -35,7 +34,7 @@ blogSchema.pre("validate", function (next) {
   }
 
   if (this.post) {
-    this.sanitizedHtml = dompurify.sanitize(marked(this.post));
+    this.sanitizedHtml = dompurify.sanitize(this.post);
   }
 
   next();

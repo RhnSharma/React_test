@@ -29,7 +29,6 @@
     "helmet": "^3.23.3",
     "jsdom": "^16.4.0",
     "jsonwebtoken": "^8.5.1",
-    "marked": "^0.8.2",
     "mongodb": "^3.6.3",
     "mongoose": "^5.10.16",
     "morgan": "^1.10.0",

@@ -4,8 +4,11 @@ import { Container, Row, Col } from "reactstrap";
 import { FaClock } from "react-icons/fa";
 import { IoIosArrowBack } from "react-icons/io";
 import axios from "axios";
+import hljs from "highlight.js";
 import TimeAgo from "react-timeago";
+import helper from "../utils/helper";
 import "./../App.css";
+
 
 const Blog = (props) => {
   const { match } = props;
@@ -26,6 +29,14 @@ const Blog = (props) => {
       })
       .catch((err) => console.log(err));
   }, [slug]);
+
+  useEffect(() => {
+    helper.highlightCode()
+    document.querySelectorAll("pre.ql-syntax").forEach(block => { 
+      hljs.highlightBlock(block);                               
+  })  
+  })
+
   return (
     <Container className="mb-5" id="iblog">
       <Row>
