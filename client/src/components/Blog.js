@@ -33,7 +33,7 @@ const Blog = (props) => {
   useEffect(() => {
     helper.highlightCode()
     document.querySelectorAll("pre.ql-syntax").forEach(block => { 
-      hljs.highlightBlock(block);                               
+      hljs.highlightElement(block);                               
   })  
   })
 
