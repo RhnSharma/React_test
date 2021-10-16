@@ -22,7 +22,8 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${(props) =>
       props.theme.mode === "dark" ? "#121212" : "rgb(255 255 255 / 0.87)"};
     color : ${(props) =>
-      props.theme.mode === "dark" ? "rgb(255 255 255 / 0.87)" : "#121212"}
+      props.theme.mode === "dark" ? "rgb(255 255 255 / 0.87)" : "#121212"};
+    transition: all 0.25s linear;
   }
   .name {
     color : ${(props) => (props.theme.mode === "dark" ? "#f13434" : "#143fde")}
