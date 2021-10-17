@@ -17,6 +17,8 @@ import NotFound from "./components/NotFound";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import storage from "local-storage-fallback";
+import { FiSun } from "react-icons/fi";
+import { FaMoon } from "react-icons/fa";
 const GlobalStyle = createGlobalStyle`
   .App {
     background-color: ${(props) =>
@@ -37,26 +39,6 @@ const GlobalStyle = createGlobalStyle`
   #brandName:hover{
     color: ${(props) => (props.theme.mode === "dark" ? "red" : "#143fde")}
   }
-  #themetoggle{
-    color: ${(props) => (props.theme.mode === "dark" ? "#f13434" : "#143fde")};
-    background-color: ${(props) =>
-      props.theme.mode === "dark" ? "#000" : "#f6f6f8"};
-    border: ${(props) =>
-      props.theme.mode === "dark" ? "1px solid #f13434" : "1px solid #143fde"};
-  }
-  #themetoggle:focus{
-    outline: ${(props) => (props.theme.mode === "dark" ? "0" : "0")};
-  }
-  #themetogglemobile{
-    color: ${(props) => (props.theme.mode === "dark" ? "#f13434" : "#143fde")};
-    background-color: ${(props) =>
-      props.theme.mode === "dark" ? "#000" : "#f6f6f8"};
-    border: ${(props) =>
-      props.theme.mode === "dark" ? "1px solid #f13434" : "1px solid #143fde"};
-  }
-  #themetogglemobile:focus{
-    outline: ${(props) => (props.theme.mode === "dark" ? "0" : "0")};
-  }
 `;
 
 function getInitialTheme() {
@@ -75,19 +57,35 @@ function App() {
         <>
           <GlobalStyle />
           <div className="App">
-            <div style={{ textAlign: "center" }}>
-              <button
-                id="themetogglemobile"
-                onClick={() => {
-                  theme.mode === "light"
-                    ? setTheme({ mode: "dark" })
-                    : setTheme({ mode: "light" });
-                }}
-              >
-                {theme.mode === "light"
-                  ? "Switch to dark mode"
-                  : "Switch to light mode"}
-              </button>
+            <div
+              id="themetogglemobile"
+              style={{ textAlign: "center", padding: "0.5rem" }}
+            >
+              {theme.mode === "light" ? (
+                <FaMoon
+                  onClick={() => {
+                    theme.mode === "light"
+                      ? setTheme({ mode: "dark" })
+                      : setTheme({ mode: "light" });
+                  }}
+                  color="black"
+                  style={{
+                    cursor: "pointer",
+                  }}
+                />
+              ) : (
+                <FiSun
+                  onClick={() => {
+                    theme.mode === "light"
+                      ? setTheme({ mode: "dark" })
+                      : setTheme({ mode: "light" });
+                  }}
+                  color="white"
+                  style={{
+                    cursor: "pointer",
+                  }}
+                />
+              )}
             </div>
             <TopNav setTheme={setTheme} theme={theme} />
             <Switch>

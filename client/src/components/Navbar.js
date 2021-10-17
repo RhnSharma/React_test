@@ -8,6 +8,8 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
+import { FiSun } from "react-icons/fi";
+import { FaMoon } from "react-icons/fa";
 import "./../App.css";
 
 const TopNav = ({ theme, setTheme }) => {
@@ -33,18 +35,31 @@ const TopNav = ({ theme, setTheme }) => {
                     </Link>
                   </NavItem>
                   <NavItem className="nav-link">
-                    <button
-                      id="themetoggle"
-                      onClick={() => {
-                        theme.mode === "light"
-                          ? setTheme({ mode: "dark" })
-                          : setTheme({ mode: "light" });
-                      }}
-                    >
-                      {theme.mode === "light"
-                        ? "Switch to dark mode"
-                        : "Switch to light mode"}
-                    </button>
+                    {theme.mode === "light" ? (
+                      <FaMoon
+                        onClick={() => {
+                          theme.mode === "light"
+                            ? setTheme({ mode: "dark" })
+                            : setTheme({ mode: "light" });
+                        }}
+                        color="black"
+                        style={{
+                          cursor: "pointer",
+                        }}
+                      />
+                    ) : (
+                      <FiSun
+                        onClick={() => {
+                          theme.mode === "light"
+                            ? setTheme({ mode: "dark" })
+                            : setTheme({ mode: "light" });
+                        }}
+                        color="white"
+                        style={{
+                          cursor: "pointer",
+                        }}
+                      />
+                    )}
                   </NavItem>
                 </div>
               ) : (
@@ -70,18 +85,31 @@ const TopNav = ({ theme, setTheme }) => {
                     </Link>
                   </NavItem>
                   <NavItem className="nav-link">
-                    <button
-                      id="themetoggle"
-                      onClick={() => {
-                        theme.mode === "light"
-                          ? setTheme({ mode: "dark" })
-                          : setTheme({ mode: "light" });
-                      }}
-                    >
-                      {theme.mode === "light"
-                        ? "Switch to dark mode"
-                        : "Switch to light mode"}
-                    </button>
+                    {theme.mode === "light" ? (
+                      <FaMoon
+                        onClick={() => {
+                          theme.mode === "light"
+                            ? setTheme({ mode: "dark" })
+                            : setTheme({ mode: "light" });
+                        }}
+                        color="black"
+                        style={{
+                          cursor: "pointer",
+                        }}
+                      />
+                    ) : (
+                      <FiSun
+                        onClick={() => {
+                          theme.mode === "light"
+                            ? setTheme({ mode: "dark" })
+                            : setTheme({ mode: "light" });
+                        }}
+                        color="white"
+                        style={{
+                          cursor: "pointer",
+                        }}
+                      />
+                    )}
                   </NavItem>
                 </>
               )}
@@ -104,18 +132,31 @@ const TopNav = ({ theme, setTheme }) => {
                     </Link>
                   </NavItem>
                   <NavItem className="nav-link">
-                    <button
-                      id="themetoggle"
-                      onClick={() => {
-                        theme.mode === "light"
-                          ? setTheme({ mode: "dark" })
-                          : setTheme({ mode: "light" });
-                      }}
-                    >
-                      {theme.mode === "light"
-                        ? "Switch to dark mode"
-                        : "Switch to light mode"}
-                    </button>
+                    {theme.mode === "light" ? (
+                      <FaMoon
+                        onClick={() => {
+                          theme.mode === "light"
+                            ? setTheme({ mode: "dark" })
+                            : setTheme({ mode: "light" });
+                        }}
+                        color="black"
+                        style={{
+                          cursor: "pointer",
+                        }}
+                      />
+                    ) : (
+                      <FiSun
+                        onClick={() => {
+                          theme.mode === "light"
+                            ? setTheme({ mode: "dark" })
+                            : setTheme({ mode: "light" });
+                        }}
+                        color="white"
+                        style={{
+                          cursor: "pointer",
+                        }}
+                      />
+                    )}
                   </NavItem>
                 </div>
               ) : (
@@ -141,18 +182,31 @@ const TopNav = ({ theme, setTheme }) => {
                     </Link>
                   </NavItem>
                   <NavItem className="nav-link">
-                    <button
-                      id="themetoggle"
-                      onClick={() => {
-                        theme.mode === "light"
-                          ? setTheme({ mode: "dark" })
-                          : setTheme({ mode: "light" });
-                      }}
-                    >
-                      {theme.mode === "light"
-                        ? "Switch to dark mode"
-                        : "Switch to light mode"}
-                    </button>
+                    {theme.mode === "light" ? (
+                      <FaMoon
+                        onClick={() => {
+                          theme.mode === "light"
+                            ? setTheme({ mode: "dark" })
+                            : setTheme({ mode: "light" });
+                        }}
+                        color="black"
+                        style={{
+                          cursor: "pointer",
+                        }}
+                      />
+                    ) : (
+                      <FiSun
+                        onClick={() => {
+                          theme.mode === "light"
+                            ? setTheme({ mode: "dark" })
+                            : setTheme({ mode: "light" });
+                        }}
+                        color="white"
+                        style={{
+                          cursor: "pointer",
+                        }}
+                      />
+                    )}
                   </NavItem>
                 </>
               )}
