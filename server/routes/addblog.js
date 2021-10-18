@@ -3,9 +3,6 @@ const router = express.Router();
 const mongoose = require("mongoose");
 const Blog = mongoose.model("Blog");
 const colors = require("colors");
-const multer = require("multer");
-const path = require("path");
-const bodyParser = require("body-parser");
 const withAuth = require("./../middleware");
 
 const morgan = require("morgan");

@@ -2,7 +2,6 @@ require("./models/db");
 require("dotenv").config();
 const express = require("express");
 const path = require("path");
-const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 var expressValidator = require("express-validator");
 var expressSession = require("express-session");
@@ -12,8 +11,8 @@ const cors = require("cors");
 
 let app = express();
 
-app.use(express.json({limit: '50mb'}));
-app.use(express.urlencoded({limit: '50mb', extended: true}));
+app.use(express.json({ limit: "50mb" }));
+app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use(cookieParser());
 app.use(expressValidator());
 app.use(

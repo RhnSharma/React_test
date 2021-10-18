@@ -1,11 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const Logger = require("../../logs/log");
-const logger = new Logger("app");
-const uuidv4 = require("uuid/v4");
-const mongoose = require("mongoose");
-const RouteID = mongoose.model("RouteID");
-const colors = require("colors");
 const path = require("path");
 const morgan = require("morgan");
 const helmet = require("helmet");
