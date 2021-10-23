@@ -5,6 +5,9 @@
 html {
   scroll-behavior: smooth;
 }
+body {
+  overscroll-behavior-y: none;
+}
 .nav {
   background-color: black;
   margin-bottom: 0;
@@ -131,6 +134,16 @@ footer p {
 .addblog:hover {
   color: rgb(255, 255, 255);
   text-decoration: none;
+}
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0.4rem;
+  width: 0%;
+  background: linear-gradient(to right, #ff5f6d, #ffc371);
+  z-index: 100;
+  transition: width 0.2s ease-out;
 }
 /* sm */
 @media (min-width: 768px) {
