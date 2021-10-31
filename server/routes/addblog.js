@@ -22,7 +22,7 @@ router.post("/", withAuth, async (req, res) => {
   if (errors) {
     res.status(400).send(errors);
   } else {
-    var blog = new Blog();
+    let blog = new Blog();
     blog.title = req.body.title;
     blog.description = req.body.description;
     blog.post = req.body.post;
